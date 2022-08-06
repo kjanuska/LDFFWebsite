@@ -105,6 +105,8 @@ hr {
 	box-sizing: content-box;
 	height: 0;
 	overflow: visible;
+	height: 2px;
+	background-color: white;
 }
 button,
 input,
@@ -202,6 +204,9 @@ h2 {
 }
 .flex-parent {
 	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 .flex-child {
 	flex: 1;
@@ -250,6 +255,7 @@ h6 {
 }
 .wide {
 	letter-spacing: 4px;
+	min-width: 300px;
 }
 hr {
 	border: 0;
@@ -258,6 +264,17 @@ hr {
 }
 .image {
 	max-width: 100%;
+	height: auto;
+}
+.film-info {
+	margin-bottom: 50px;
+	padding: 5px;
+}
+.film-text {
+	margin-left: 25px;
+}
+.poster {
+	width: 150px;
 	height: auto;
 }
 img {

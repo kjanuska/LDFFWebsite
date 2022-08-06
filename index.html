@@ -17,9 +17,6 @@
 			body {
 				font-family: "Lato", sans-serif;
 			}
-			.mySlides {
-				display: none;
-			}
 		</style>
 	</head>
 	<body>
@@ -84,6 +81,14 @@
 						</h2>
 					</div>
 					<div class="child flex-child">
+						<img
+							src="images/logos/ldff-logo.png"
+							alt="LDFF logo"
+							width="150"
+							height="150"
+						/>
+					</div>
+					<div class="child flex-child">
 						<h2 class="wide title-english">
 							Lithuanian<br />Documentary<br />Film Festival
 						</h2>
@@ -93,208 +98,291 @@
 
 			<!-- The Film Section -->
 			<div class="black" id="films">
-				<div
-					class="container content padding-64"
-				>
+				<div class="container content padding-64">
 					<h2 class="wide center">FILMS</h2>
 					<br />
 
 					<div class="row-padding padding-32" style="margin: 0 -16px">
+						<!-- October 5th -->
 						<div class="third margin-bottom">
 							<h3><b>October 5th</b></h3>
-							<h4>"Kernagis"</h4>
-							<p class="opacity">7:30 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-							</p>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/kernagis.png"
+								/>
+								<div class="film-text">
+									<h4>"Kernagis"</h4>
+									<p class="opacity">7:30 PM</p>
+									<p>
+										The film "Kernagis" is the first
+										documentary about the maestro Vytautas
+										Kernagis. This is the confession of one
+										of the most famous Lithuanian artists of
+										all time. This is a blog for his entire
+										generation. And a testimony that is
+										irreplaceable. Director Andrius
+										Lekavičius invites viewers to enter the
+										world of V. Kernagis, which is being
+										opened for the first time thanks to the
+										intimate and invisible family archive.
+									</p>
+								</div>
+							</div>
 							<button
 								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
+								onclick="buyTickets()"
 							>
 								Buy Tickets
 							</button>
 						</div>
-						<hr>
+						<hr />
+
 						<!-- October 6th -->
 						<div class="third margin-bottom">
 							<h3><b>October 6th</b></h3>
-							<h4>"Pavyzdingas elgesys" ("Exemplary Behaviour")</h4>
-							<p class="opacity">7:30 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/pavyzdingas-elgesys.png"
+								/>
+								<div class="film-text">
+									<h4>
+										"Pavyzdingas elgesys" ("Exemplary
+										Behaviour")
+									</h4>
+									<p class="opacity">7:30 PM</p>
+									<p>
+										The film explores the paradox of
+										exemplary behaviour of murderers
+										currently serving life sentences in
+										Lukiskes Prison in Vilnius and hoping to
+										return to society.
+									</p>
+								</div>
+							</div>
 						</div>
-						<hr>
+						<hr />
+
 						<!-- October 7th -->
 						<div class="third margin-bottom">
 							<h3><b>October 7th</b></h3>
-							<h4>"Pasienio paukščiai" ("Before They Meet")</h4>
-							<p class="opacity">7:30 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed	vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/pasienio-pauksciai.jpg"
+								/>
+								<div class="film-text">
+									<h4>
+										"Pasienio paukščiai" ("Before They
+										Meet")
+									</h4>
+									<p class="opacity">7:30 PM</p>
+									<p>
+										At each side of the border between
+										Lithuania and Kaliningrad Oblast, a
+										Russian exclave surrounded by the EU,
+										there is an ornithological station
+										independently studying the migration of
+										the birds. Will the succeed in
+										collaborating?
+									</p>
+								</div>
+							</div>
 						</div>
-						<hr>
+						<hr />
+
 						<!-- October 8th -->
 						<div class="third margin-bottom">
 							<h3><b>October 8th</b></h3>
-							<h4>"Blue/ Red /Deport"</h4>
-							<p class="opacity">2:00 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
-							<h4>"Būsiu su tavim" ("I'll Stand by You")</h4>
-							<p class="opacity">5:00 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/Blue.Red.Deport.jpg"
+								/>
+								<div class="film-text">
+									<h4>"Blue/ Red /Deport"</h4>
+									<p class="opacity">2:00 PM</p>
+									<p>
+										One year into his life in Moria, the
+										biggest refugee camp in Europe that’s
+										burnt down in 2020, a 37-year-old Afghan
+										filmmaker Talib Shah Hossaini finds
+										himself on the verge of losing hope but,
+										instead of giving up, he makes a
+										fictional film via which he explores his
+										complex reality and indefinite future.
+										Director Lina Luzyte observes Talib
+										Shah, using the meta film as a
+										magnifying glass to blow-up the reality.
+									</p>
+								</div>
+							</div>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/busiu-su-tavim.jpg"
+								/>
+								<div class="film-text">
+									<h4>
+										"Būsiu su tavim" ("I'll Stand by You")
+									</h4>
+									<p class="opacity">5:00 PM</p>
+									<p>
+										A psychologist and a police officer
+										begin a mission to reduce the record
+										suicide numbers in their rural Lithuania
+										hometown. The two women work
+										door-to-door to heal the loneliest
+										members of the community.
+									</p>
+								</div>
+							</div>
 						</div>
-						<hr>
+						<hr />
+
 						<!-- October 9th -->
 						<div class="third margin-bottom">
 							<h3><b>October 9th</b></h3>
-							<h4>"Mončys. Žemaitis iš Paryžiaus" ("Moncys. Samogitian de Paris")</h4>
-							<p class="opacity">12:30 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed	vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
-							<h4>"Švelnūs kariai" ("Gentle Warriors")</h4>
-							<p class="opacity">3:00 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed	vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
-							<h4>"Sugrįžę iš Niujorko" ("Back from New York")</h4>
-							<p class="opacity">5:00 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed	vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/MONCYS-PLAKATAS-1.jpg"
+								/>
+								<div class="film-text">
+									<h4>
+										"Mončys. Žemaitis iš Paryžiaus"
+										("Moncys. Samogitian de Paris")
+									</h4>
+									<p class="opacity">12:30 PM</p>
+									<p>
+										Who was Antanas Moncys? A Lithuanian. A
+										Samogitian. An emigrant. A Parisian. A
+										son. Father. Husband. Brother. Sculptor.
+										An artist who merged an archaic
+										Lithuanian worldview with modern Western
+										European art.
+									</p>
+								</div>
+							</div>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/Gentle-warriors.jpg"
+								/>
+								<div class="film-text">
+									<h4>
+										"Švelnūs kariai" ("Gentle Warriors")
+									</h4>
+									<p class="opacity">3:00 PM</p>
+									<p>
+										Three young girls decide to do military
+										service on a voluntary basis after the
+										conscription for men is reintroduced in
+										Lithuania as a response to possible
+										threats from neighboring Russia. The
+										girls live and train among 600 men at an
+										isolated military base for 9 months. By
+										observing the physical and emotional
+										transformation of our characters we
+										witness the bearing of an independent
+										woman, responsible for her own faith and
+										happiness.
+									</p>
+								</div>
+							</div>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/Post-Sugrize-is-Niujorko.jpg"
+								/>
+								<div class="film-text">
+									<h4>
+										"Sugrįžę iš Niujorko" ("Back from New
+										York")
+									</h4>
+									<p class="opacity">5:00 PM</p>
+									<p>
+										“Back from New York” is a film about two
+										unique and appreciated artists, close
+										friends, whose lives were greatly
+										influenced by emigration. It is not only
+										a story about the discoveries of these
+										wanderers, but also about the true joys
+										of life, coming back and creating a new
+										life in their homeland. By choice, they
+										decided to return to Lithuania after
+										many years spent in the rattling and
+										enchanting New York. Photo-artist Arūnas
+										Kulikauskas has settled in a monocot in
+										Ukmergė district, painter Eugenijus
+										Varkulevičius-Varkalis – in his hometown
+										Kaunas.
+									</p>
+								</div>
+							</div>
 						</div>
-						<hr>
+						<hr />
+
 						<!-- October 14th -->
 						<div class="third margin-bottom">
 							<h3><b>October 14th</b></h3>
-							<h4>"Sugrįžę iš Niujorko" ("Back from New York")</h4>
-							<p class="opacity">7:30 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed	vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/Post-Sugrize-is-Niujorko.jpg"
+								/>
+								<div class="film-text">
+									<h4>
+										"Sugrįžę iš Niujorko" ("Back from New
+										York")
+									</h4>
+									<p class="opacity">7:30 PM</p>
+									<p>
+										“Back from New York” is a film about two
+										unique and appreciated artists, close
+										friends, whose lives were greatly
+										influenced by emigration. It is not only
+										a story about the discoveries of these
+										wanderers, but also about the true joys
+										of life, coming back and creating a new
+										life in their homeland. By choice, they
+										decided to return to Lithuania after
+										many years spent in the rattling and
+										enchanting New York. Photo-artist Arūnas
+										Kulikauskas has settled in a monocot in
+										Ukmergė district, painter Eugenijus
+										Varkulevičius-Varkalis – in his hometown
+										Kaunas.
+									</p>
+								</div>
+							</div>
 						</div>
-						<hr>
+						<hr />
+
 						<!-- October 15th -->
 						<div class="third margin-bottom">
 							<h3><b>October 15th</b></h3>
-							<h4>"Šuolis" ("Jump")</h4>
-							<p class="opacity">2:00 PM</p>
-							<p>
-								Praesent tincidunt sed tellus ut rutrum sed	vitae justo.
-							</p>
-							<button
-								class="button white margin-bottom"
-								onclick="document.getElementById('ticketModal').style.display='block'"
-							>
-								Buy Tickets
-							</button>
+							<div class="flex-parent film-info">
+								<img
+									class="poster"
+									src="images/posters/Jump.jpg"
+								/>
+								<div class="film-text">
+									<h4>"Šuolis" ("Jump")</h4>
+									<p class="opacity">2:00 PM</p>
+									<p>
+										In 1970 Lithuanian sailor Simas Kudirka
+										made a desperate leap for freedom from
+										his Soviet vessel to a US Coast Guard
+										cutter, but the Americans sent him back
+										- inciting one of the Cold War's most
+										complex and suspenseful political
+										blunders.
+									</p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Ticket Modal -->
-			<div id="ticketModal" class="modal">
-				<div class="modal-content animate-top card-4">
-					<header class="container teal center padding-32">
-						<span
-							onclick="document.getElementById('ticketModal').style.display='none'"
-							class="button teal xlarge display-topright"
-							>×</span
-						>
-						<h2 class="wide">
-							<i class="fa fa-suitcase margin-right"></i>Tickets
-						</h2>
-					</header>
-					<div class="container">
-						<p>
-							<label
-								><i class="fa fa-shopping-cart"></i> $15 per
-								person</label
-							>
-						</p>
-						<input
-							class="input border"
-							type="number"
-							min="1"
-							placeholder="How many?"
-						/>
-						<p>
-							<label><i class="fa fa-user"></i> Send To</label>
-						</p>
-						<input
-							class="input border"
-							type="text"
-							placeholder="Enter email"
-						/>
-						<button
-							class="button block teal padding-16 section right"
-						>
-							PAY <i class="fa fa-check"></i>
-						</button>
-						<button
-							class="button red section"
-							onclick="document.getElementById('ticketModal').style.display='none'"
-						>
-							Close <i class="fa fa-remove"></i>
-						</button>
-						<p class="right">
-							Need <a href="#" class="text-blue">help?</a>
-						</p>
 					</div>
 				</div>
 			</div>
@@ -307,9 +395,7 @@
 			>
 				<h2 class="wide center">CONTACT</h2>
 				<div class="row padding-32">
-					<div class="col m6 large margin-bottom">
-						<i class="fa fa-map-marker" style="width: 30px"></i>
-						Chicago, US<br />
+					<div class="footer col m6 large margin-bottom">
 						<i class="fa fa-phone" style="width: 30px"></i>
 						+1 312-375-2728<br />
 						<a href="mailto:ltdocfestival@gmail.com">
@@ -335,24 +421,6 @@
 		</div>
 
 		<script>
-			// Automatic Slideshow - change image every 4 seconds
-			var myIndex = 0;
-			carousel();
-
-			function carousel() {
-				var i;
-				var x = document.getElementsByClassName("mySlides");
-				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";
-				}
-				myIndex++;
-				if (myIndex > x.length) {
-					myIndex = 1;
-				}
-				x[myIndex - 1].style.display = "block";
-				setTimeout(carousel, 4000);
-			}
-
 			// Used to toggle the menu on small screens when clicking on the menu button
 			function myFunction() {
 				var x = document.getElementById("navDemo");
@@ -363,13 +431,10 @@
 				}
 			}
 
-			// When the user clicks anywhere outside of the modal, close it
-			var modal = document.getElementById("ticketModal");
-			window.onclick = function (event) {
-				if (event.target == modal) {
-					modal.style.display = "none";
-				}
-			};
+			// used to link to a ticket buying page
+			function buyTickets() {
+				window.open('http://google.com','_blank');
+			}
 		</script>
 	</body>
 </html>
