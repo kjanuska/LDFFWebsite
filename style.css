@@ -524,6 +524,17 @@ a {
 	display: block;
 	outline: 0;
 }
+.bar-lang {
+	padding: 8px 16px;
+	float: right;
+	width: auto;
+	border: none;
+	display: flex;
+	outline: 0;
+}
+.lang-img {
+	margin-right: 8px;
+}
 .bar .dropdown-hover,
 .bar .dropdown-click {
 	position: static;

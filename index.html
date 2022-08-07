@@ -43,6 +43,18 @@
 					class="bar-item button padding-large hide-small"
 					>CONTACT</a
 				>
+				<a
+					href="javascript:void(0)"
+					onclick="switchLT()"
+					class="bar-lang button padding-large hide-small"
+					><img class="lang-img" src="images/flags/lt.svg" />LT</a
+				>
+				<a
+					href="javascript:void(0)"
+					onclick="switchEN()"
+					class="bar-lang button padding-large hide-small"
+					><img class="lang-img" src="images/flags/us.svg" />EN</a
+				>
 			</div>
 		</div>
 
@@ -431,7 +443,15 @@
 
 			// used to link to a ticket buying page
 			function buyTickets() {
-				window.open('https://google.com','_blank');
+				window.open("https://google.com", "_blank");
+			}
+
+			function switchLT() {
+				alert("switched to lithuanian");
+			}
+
+			function switchEN() {
+				alert("switched to english");
 			}
 		</script>
 	</body>
