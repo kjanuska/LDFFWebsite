@@ -3,7 +3,10 @@
 	<head>
 		<title>LDFF</title>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, viewport-fit=cover"
+		/>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<link
 			rel="stylesheet"
@@ -21,12 +24,12 @@
 	</head>
 	<body>
 		<!-- Navbar -->
-		<div class="top">
+		<div id="navbar" class="top">
 			<div class="bar black card">
 				<a
 					class="bar-item button padding-large hide-medium hide-large right"
 					href="javascript:void(0)"
-					onclick="myFunction()"
+					onclick="navMenu()"
 					title="Toggle Navigation Menu"
 					><i class="fa fa-bars"></i
 				></a>
@@ -43,24 +46,26 @@
 					class="bar-item button padding-large hide-small"
 					>CONTACT</a
 				>
-				<a
-					href="javascript:void(0)"
-					onclick="switchLT()"
-					class="bar-lang button padding-large hide-small"
-					><img class="lang-img" src="images/flags/lt.svg" />LT</a
-				>
-				<a
-					href="javascript:void(0)"
-					onclick="switchEN()"
-					class="bar-lang button padding-large hide-small"
-					><img class="lang-img" src="images/flags/us.svg" />EN</a
-				>
+				<div class="lang-btns">
+					<a
+						href="javascript:void(0)"
+						onclick="switchLT()"
+						class="bar-lang button padding-large"
+						><img class="lang-img" src="images/flags/lt.png" />LT</a
+					>
+					<a
+						href="javascript:void(0)"
+						onclick="switchEN()"
+						class="bar-lang button padding-large"
+						><img class="lang-img" src="images/flags/us.png" />EN</a
+					>
+				</div>
 			</div>
 		</div>
 
 		<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 		<div
-			id="navDemo"
+			id="navMenu"
 			class="bar-block black hide hide-large hide-medium top"
 			style="margin-top: 46px"
 		>
@@ -83,29 +88,18 @@
 			<!-- Title section -->
 			<div
 				class="container content center padding-64"
-				style="max-width: 800px"
+				style="max-width: 1000px"
 				id="ldff2022"
 			>
-				<div class="parent flex-parent">
-					<div class="child flex-child">
-						<h2 class="wide title-lithuanian">
-							Lietuviškų<br />Dokumentinių<br />Filmų Festivalis
-						</h2>
-					</div>
-					<div class="child flex-child">
-						<img
-							src="images/logos/ldff-logo.png"
-							alt="LDFF logo"
-							width="150"
-							height="150"
-						/>
-					</div>
-					<div class="child flex-child">
-						<h2 class="wide title-english">
-							Lithuanian<br />Documentary<br />Film Festival
-						</h2>
-					</div>
-				</div>
+				<img
+					src="images/logos/ldff-logo.png"
+					alt="LDFF logo"
+					width="100"
+					height="100"
+				/>
+				<h2 class="wide title-english">
+					LITHUANIAN DOCUMENTARY FILM FESTIVAL
+				</h2>
 			</div>
 
 			<!-- The Film Section -->
@@ -114,7 +108,7 @@
 					<h2 class="wide center">FILMS</h2>
 					<div class="row-padding padding-32" style="margin: 0 -16px">
 						<!-- October 5th -->
-						<div class="third margin-bottom">
+						<div>
 							<h3><b>October 5th</b></h3>
 							<div class="flex-parent film-info">
 								<img
@@ -140,7 +134,8 @@
 								</div>
 							</div>
 							<button
-								class="button white margin-bottom"
+								class="button white"
+								style="margin-left: 5px; margin-top: 5px;"
 								onclick="buyTickets()"
 							>
 								Buy Tickets
@@ -149,7 +144,7 @@
 						<hr />
 
 						<!-- October 6th -->
-						<div class="third margin-bottom">
+						<div>
 							<h3><b>October 6th</b></h3>
 							<div class="flex-parent film-info">
 								<img
@@ -175,7 +170,7 @@
 						<hr />
 
 						<!-- October 7th -->
-						<div class="third margin-bottom">
+						<div>
 							<h3><b>October 7th</b></h3>
 							<div class="flex-parent film-info">
 								<img
@@ -203,7 +198,7 @@
 						<hr />
 
 						<!-- October 8th -->
-						<div class="third margin-bottom">
+						<div>
 							<h3><b>October 8th</b></h3>
 							<div class="flex-parent film-info">
 								<img
@@ -252,7 +247,7 @@
 						<hr />
 
 						<!-- October 9th -->
-						<div class="third margin-bottom">
+						<div>
 							<h3><b>October 9th</b></h3>
 							<div class="flex-parent film-info">
 								<img
@@ -313,7 +308,7 @@
 									</h4>
 									<p class="opacity">5:00 PM</p>
 									<p>
-										“Back from New York” is a film about two
+										"Back from New York" is a film about two
 										unique and appreciated artists, close
 										friends, whose lives were greatly
 										influenced by emigration. It is not only
@@ -335,7 +330,7 @@
 						<hr />
 
 						<!-- October 14th -->
-						<div class="third margin-bottom">
+						<div>
 							<h3><b>October 14th</b></h3>
 							<div class="flex-parent film-info">
 								<img
@@ -349,7 +344,7 @@
 									</h4>
 									<p class="opacity">7:30 PM</p>
 									<p>
-										“Back from New York” is a film about two
+										"Back from New York" is a film about two
 										unique and appreciated artists, close
 										friends, whose lives were greatly
 										influenced by emigration. It is not only
@@ -371,7 +366,7 @@
 						<hr />
 
 						<!-- October 15th -->
-						<div class="third margin-bottom">
+						<div>
 							<h3><b>October 15th</b></h3>
 							<div class="flex-parent film-info">
 								<img
@@ -407,7 +402,7 @@
 				<div class="row padding-32">
 					<div class="footer col m6 large margin-bottom">
 						<i class="fa fa-phone" style="width: 30px"></i>
-						+1 312-375-2728<br />
+						+1 (312) 375-2728<br />
 						<a href="mailto:ltdocfestival@gmail.com">
 							<i class="fa fa-envelope" style="width: 30px"> </i>
 							ltdocfestival@gmail.com<br />
@@ -431,9 +426,25 @@
 		</div>
 
 		<script>
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function () {
+				var currentScrollPos = window.pageYOffset;
+				if (currentScrollPos < 450) {
+					document.getElementById("navbar").style.top = "0";
+				} else {
+					if (prevScrollpos > currentScrollPos) {
+						document.getElementById("navbar").style.top = "0";
+					} else {
+						document.getElementById("navbar").style.top = "-50px";
+					}
+				}
+
+				prevScrollpos = currentScrollPos;
+			};
+
 			// Used to toggle the menu on small screens when clicking on the menu button
-			function myFunction() {
-				var x = document.getElementById("navDemo");
+			function navMenu() {
+				var x = document.getElementById("navMenu");
 				if (x.className.indexOf("show") == -1) {
 					x.className += " show";
 				} else {
