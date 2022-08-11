@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>LDFF</title>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, viewport-fit=cover"
+		/>
+		<link href="/style.css" rel="stylesheet" type="text/css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Lato"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<style>
+			body {
+				font-family: "Lato", sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<div id="navbar" class="top">
+			<div class="bar black card">
+				<a
+					class="bar-item button padding-large hide-medium hide-large right"
+					href="javascript:void(0)"
+					onclick="navMenu()"
+					title="Toggle Navigation Menu"
+					><i class="fa fa-bars"></i
+				></a>
+				<a href="#" class="bar-item button padding-large hide-small"
+					>LDFF 2022</a
+				>
+				<a
+					href="#previous"
+					class="bar-item button padding-large hide-small"
+					>PREVIOUS YEARS</a
+				>
+				<a
+					href="#contact"
+					class="bar-item button padding-large hide-small"
+					>CONTACT</a
+				>
+				<div class="lang-btns">
+					<a
+						href="javascript:void(0)"
+						onclick="switchLT()"
+						class="bar-lang button padding-large"
+						><img class="lang-img" src="/images/flags/lt.png" />LT</a
+					>
+					<a
+						href="javascript:void(0)"
+						onclick="switchEN()"
+						class="bar-lang button padding-large"
+						><img class="lang-img" src="/images/flags/us.png" />EN</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+		<div
+			id="navMenu"
+			class="bar-block black hide hide-large hide-medium top"
+			style="margin-top: 46px"
+		>
+			<a
+				href="#previous"
+				class="bar-item button padding-large"
+				onclick="myFunction()"
+				>PREVIOUS YEARS</a
+			>
+			<a
+				href="#contact"
+				class="bar-item button padding-large"
+				onclick="myFunction()"
+				>CONTACT</a
+			>
+		</div>
+
+		<!-- Page content -->
+		<div class="content" style="max-width: 100%; margin-top: 46px">
+			<!-- Title section -->
+			<div
+				class="container content center padding-64"
+				style="max-width: 1000px"
+				id="ldff2022"
+			>
+				<img
+					src="images/logos/ldff-logo.png"
+					alt="LDFF logo"
+					width="100"
+					height="100"
+				/>
+				<h1 class="wide title-english">
+					LITHUANIAN DOCUMENTARY FILM FESTIVAL
+				</h1>
+			</div>
+
+			<!-- The Film Section -->
+			<div class="black" id="films">
+				<div class="container content padding-32">
+					<h2 class="wide center padding-32">2022 FILMS</h2>
+					<h4 class="wide center">October</h2>
+					<div class="dates">
+						<a
+							href="#oct5"
+							class="date button padding-large"
+							>5th</a
+						>
+						<a
+							href="#oct6"
+							class="date button padding-large"
+							>6th</a
+						>
+						<a
+							href="#oct7"
+							class="date button padding-large"
+							>7th</a
+						>
+						<a
+							href="#oct8"
+							class="date button padding-large"
+							>8th</a
+						>
+						<a
+							href="#oct9"
+							class="date button padding-large"
+							>9th</a
+						>
+						<a
+							href="#oct14"
+							class="date button padding-large"
+							>14th</a
+						>
+						<a
+							href="#oct15"
+							class="date button padding-large"
+							>15th</a
+						>
+					</div>
+					<div class="row-padding padding-32" style="margin: 0 -16px">
+						<!-- October 5th -->
+						<div>
+							<h3 id="oct5"><b>October 5th</b></h3>
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/kernagis.png"
+									/>
+
+									<div class="film-text">
+										<h4>"Kernagis"</h4>
+										<p class="opacity">7:30 PM</p>
+										<p>
+											The film "Kernagis" is the first
+											documentary about the maestro
+											Vytautas Kernagis. This is the
+											confession of one of the most famous
+											Lithuanian artists of all time. This
+											is a blog for his entire generation.
+											And a testimony that is
+											irreplaceable. Director Andrius
+											Lekavičius invites viewers to enter
+											the world of V. Kernagis, which is
+											being opened for the first time
+											thanks to the intimate and invisible
+											family archive.
+										</p>
+										<button
+											class="button white"
+											onclick="buyTickets()"
+										>
+											Buy Tickets
+										</button>
+									</div>
+								</div>
+								<div class="videoWrapper">
+									<iframe
+										src="https://player.vimeo.com/video/688335400?h=2b47145d79&byline=0"
+										width="640"
+										height="360"
+										frameborder="0"
+										allow="autoplay; fullscreen; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+						</div>
+						<hr />
+
+						<!-- October 6th -->
+						<div>
+							<h3 id="oct6"><b>October 6th</b></h3>
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/pavyzdingas-elgesys.png"
+									/>
+									<div class="film-text">
+										<h4>
+											"Pavyzdingas elgesys" ("Exemplary
+											Behaviour")
+										</h4>
+										<p class="opacity">7:30 PM</p>
+										<p>
+											The film explores the paradox of
+											exemplary behaviour of murderers
+											currently serving life sentences in
+											Lukiskes Prison in Vilnius and
+											hoping to return to society.
+										</p>
+									</div>
+								</div>
+								<div class="videoWrapper">
+									<iframe
+										src="https://player.vimeo.com/video/354173099?h=e867525aea&byline=0"
+										width="640"
+										height="360"
+										frameborder="0"
+										allow="autoplay; fullscreen; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+						</div>
+						<hr />
+
+						<!-- October 7th -->
+						<div>
+							<h3 id="oct7"><b>October 7th</b></h3>
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/pasienio-pauksciai.jpg"
+									/>
+									<div class="film-text">
+										<h4>
+											"Pasienio paukščiai" ("Before They
+											Meet")
+										</h4>
+										<p class="opacity">7:30 PM</p>
+										<p>
+											At each side of the border between
+											Lithuania and Kaliningrad Oblast, a
+											Russian exclave surrounded by the
+											EU, there is an ornithological
+											station independently studying the
+											migration of the birds. Will the
+											succeed in collaborating?
+										</p>
+									</div>
+								</div>
+								<div class="videoWrapper">
+									<iframe
+										width="560"
+										height="315"
+										src="https://www.youtube.com/embed/WGKJFUYSwuU"
+										title="YouTube video player"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+						</div>
+						<hr />
+
+						<!-- October 8th -->
+						<div>
+							<h3 id="oct8"><b>October 8th</b></h3>
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/blue-red-deport.png"
+									/>
+									<div class="film-text">
+										<h4>"Blue/ Red /Deport"</h4>
+										<p class="opacity">2:00 PM</p>
+										<p>
+											One year into his life in Moria, the
+											biggest refugee camp in Europe
+											that’s burnt down in 2020, a
+											37-year-old Afghan filmmaker Talib
+											Shah Hossaini finds himself on the
+											verge of losing hope but, instead of
+											giving up, he makes a fictional film
+											via which he explores his complex
+											reality and indefinite future.
+											Director Lina Luzyte observes Talib
+											Shah, using the meta film as a
+											magnifying glass to blow-up the
+											reality.
+										</p>
+									</div>
+								</div>
+								<div class="videoWrapper">
+									<iframe
+										title="vimeo-player"
+										src="https://player.vimeo.com/video/675800079?h=6de745c1d4&byline=0"
+										width="640"
+										height="360"
+										frameborder="0"
+										allow="autoplay; fullscreen; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/busiu-su-tavim.jpg"
+									/>
+									<div class="film-text">
+										<h4>
+											"Būsiu su tavim" ("I'll Stand by
+											You")
+										</h4>
+										<p class="opacity">5:00 PM</p>
+										<p>
+											A psychologist and a police officer
+											begin a mission to reduce the record
+											suicide numbers in their rural
+											Lithuania hometown. The two women
+											work door-to-door to heal the
+											loneliest members of the community.
+										</p>
+									</div>
+								</div>
+								<div class="videoWrapper">
+									<iframe
+										width="560"
+										height="315"
+										src="https://www.youtube.com/embed/WqM5Qm3ZY4E"
+										title="YouTube video player"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+						</div>
+						<hr />
+
+						<!-- October 9th -->
+						<div>
+							<h3 id="oct9"><b>October 9th</b></h3>
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/MONCYS-PLAKATAS-1.jpg"
+									/>
+									<div class="film-text">
+										<h4>
+											"Mončys. Žemaitis iš Paryžiaus"
+											("Moncys. Samogitian de Paris")
+										</h4>
+										<p class="opacity">12:30 PM</p>
+										<p>
+											Who was Antanas Moncys? A
+											Lithuanian. A Samogitian. An
+											emigrant. A Parisian. A son. Father.
+											Husband. Brother. Sculptor. An
+											artist who merged an archaic
+											Lithuanian worldview with modern
+											Western European art.
+										</p>
+									</div>
+								</div>
+								<div class="videoWrapper">
+									<iframe
+										src="https://player.vimeo.com/video/687869795?h=5ed339248c&byline=0"
+										width="640"
+										height="360"
+										frameborder="0"
+										allow="autoplay; fullscreen; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/Gentle-warriors.jpg"
+									/>
+									<div class="film-text">
+										<h4>
+											"Švelnūs kariai" ("Gentle Warriors")
+										</h4>
+										<p class="opacity">3:00 PM</p>
+										<p>
+											Three young girls decide to do
+											military service on a voluntary
+											basis after the conscription for men
+											is reintroduced in Lithuania as a
+											response to possible threats from
+											neighboring Russia. The girls live
+											and train among 600 men at an
+											isolated military base for 9 months.
+											By observing the physical and
+											emotional transformation of our
+											characters we witness the bearing of
+											an independent woman, responsible
+											for her own faith and happiness.
+										</p>
+									</div>
+								</div>
+								<div class="videoWrapper">
+									<iframe
+										src="https://player.vimeo.com/video/489901035?h=c06cae986b&byline=0"
+										width="640"
+										height="338"
+										frameborder="0"
+										allow="autoplay; fullscreen; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/Post-Sugrize-is-Niujorko.jpg"
+									/>
+									<div class="film-text">
+										<h4>
+											"Sugrįžę iš Niujorko" ("Back from
+											New York")
+										</h4>
+										<p class="opacity">5:00 PM</p>
+										<p>
+											"Back from New York" is a film about
+											two unique and appreciated artists,
+											close friends, whose lives were
+											greatly influenced by emigration. It
+											is not only a story about the
+											discoveries of these wanderers, but
+											also about the true joys of life,
+											coming back and creating a new life
+											in their homeland. By choice, they
+											decided to return to Lithuania after
+											many years spent in the rattling and
+											enchanting New York. Photo-artist
+											Arūnas Kulikauskas has settled in a
+											monocot in Ukmergė district, painter
+											Eugenijus Varkulevičius-Varkalis –
+											in his hometown Kaunas.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr />
+
+						<!-- October 14th -->
+						<div>
+							<h3 id="oct14"><b>October 14th</b></h3>
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/Post-Sugrize-is-Niujorko.jpg"
+									/>
+									<div class="film-text">
+										<h4>
+											"Sugrįžę iš Niujorko" ("Back from
+											New York")
+										</h4>
+										<p class="opacity">7:30 PM</p>
+										<p>
+											"Back from New York" is a film about
+											two unique and appreciated artists,
+											close friends, whose lives were
+											greatly influenced by emigration. It
+											is not only a story about the
+											discoveries of these wanderers, but
+											also about the true joys of life,
+											coming back and creating a new life
+											in their homeland. By choice, they
+											decided to return to Lithuania after
+											many years spent in the rattling and
+											enchanting New York. Photo-artist
+											Arūnas Kulikauskas has settled in a
+											monocot in Ukmergė district, painter
+											Eugenijus Varkulevičius-Varkalis –
+											in his hometown Kaunas.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr />
+
+						<!-- October 15th -->
+						<div>
+							<h3 id="oct15"><b>October 15th</b></h3>
+							<div class="film-info">
+								<div class="flex-parent">
+									<img
+										class="poster"
+										src="/images/posters/Jump.jpg"
+									/>
+									<div class="film-text">
+										<h4>"Šuolis" ("Jump")</h4>
+										<p class="opacity">2:00 PM</p>
+										<p>
+											In 1970 Lithuanian sailor Simas
+											Kudirka made a desperate leap for
+											freedom from his Soviet vessel to a
+											US Coast Guard cutter, but the
+											Americans sent him back - inciting
+											one of the Cold War's most complex
+											and suspenseful political blunders.
+										</p>
+									</div>
+								</div>
+								<div class="videoWrapper">
+									<iframe
+										width="560"
+										height="315"
+										src="https://www.youtube.com/embed/v69SGpbJaBo"
+										title="YouTube video player"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- The Contact Section -->
+			<div
+				class="container content padding-64"
+				style="max-width: 800px"
+				id="contact"
+			>
+				<h2 class="wide">CONTACT</h2>
+				<div class="row padding-32">
+					<div class="footer col m6 large margin-bottom">
+						<i class="fa fa-phone" style="width: 30px"></i>
+						+1 (312) 375-2728<br />
+						<a href="mailto:ltdocfestival@gmail.com">
+							<i class="fa fa-envelope" style="width: 30px"> </i>
+							ltdocfestival@gmail.com<br />
+						</a>
+						<a
+							href="https://www.facebook.com/ldffdocfestival/"
+							target="_blank"
+						>
+							<i
+								class="fa fa-facebook-official hover-opacity"
+								style="width: 30px"
+							>
+							</i>
+							LDFF Festival
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- End Page Content -->
+		</div>
+
+		<script>
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function () {
+				var currentScrollPos = window.pageYOffset;
+				if (currentScrollPos < 450) {
+					document.getElementById("navbar").style.top = "0";
+				} else {
+					if (prevScrollpos > currentScrollPos) {
+						document.getElementById("navbar").style.top = "0";
+					} else {
+						document.getElementById("navbar").style.top = "-50px";
+					}
+				}
+
+				prevScrollpos = currentScrollPos;
+			};
+
+			// Used to toggle the menu on small screens when clicking on the menu button
+			function navMenu() {
+				var x = document.getElementById("navMenu");
+				if (x.className.indexOf("show") == -1) {
+					x.className += " show";
+				} else {
+					x.className = x.className.replace(" show", "");
+				}
+			}
+
+			// used to link to a ticket buying page
+			function buyTickets() {
+				window.open("https://google.com", "_blank");
+			}
+
+			function switchLT() {
+				window.location.href = "lt";
+			}
+
+			function switchEN() {
+				window.location.href = "/";
+			}
+		</script>
+	</body>
+</html>
