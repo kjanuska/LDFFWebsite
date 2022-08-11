@@ -108,6 +108,10 @@ hr {
 	overflow: visible;
 	background-color: white;
 }
+.vl {
+	border-left: 3px solid white;
+	height: 100px;
+  }
 button,
 input,
 select,
@@ -191,7 +195,7 @@ html {
 	overflow-x: hidden;
 }
 .title {
-	font-weight: bold;
+	font-weight: 700;
 	text-align: center;
 }
 .flex-parent {
@@ -218,9 +222,11 @@ h1 {
 	font-size: 36px;
 }
 h2 {
+	font-weight: 400;
 	font-size: 30px;
 }
 h3 {
+	font-style: italic;
 	font-size: 24px;
 }
 h4 {
@@ -251,7 +257,6 @@ h4,
 h5,
 h6 {
 	font-family: "Segoe UI", Arial, sans-serif;
-	font-weight: 400;
 	margin: 0 0;
 }
 .modal-dialog {
@@ -277,7 +282,7 @@ opacity:1;
 	min-width: 300px;
 }
 .address {
-	font-size: 20px;
+	font-size: 16px;
 }
 .film-info {
 	margin-top: 25px;
@@ -298,6 +303,23 @@ opacity:1;
 }
 .film-text {
 	flex: 1;
+}
+.same-film {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.left {
+	flex: 2;
+	justify-self: flex-start;
+}
+.middle {
+	flex: 0.5;
+	justify-self: center;
+}
+.right {
+	flex: 1.5;
+	justify-self: flex-end;
 }
 .video-wrapper {
 	position: relative;
@@ -409,6 +431,9 @@ a {
 	text-align: center;
 	cursor: pointer;
 	white-space: nowrap;
+}
+.tickets-btn {
+	margin-bottom: 16px;
 }
 .btn:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
