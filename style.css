@@ -276,6 +276,9 @@ opacity:1;
 	letter-spacing: 4px;
 	min-width: 300px;
 }
+.address {
+	font-size: 20px;
+}
 .film-info {
 	margin-top: 25px;
 	padding: 5px;
@@ -283,6 +286,7 @@ opacity:1;
 .poster {
 	width: 150px;
 	height: auto;
+	margin-bottom: 32px;
 }
 @media (min-width: 600px) {
 	.poster {
@@ -321,11 +325,24 @@ opacity:1;
 .contact {
 	padding-top: 32px;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
 	max-width: 900px;
 	margin: auto;
 }
+.contact-info {
+	padding-top: 16px;
+}
+@media (min-width: 600px) {
+	.contact {
+		flex-direction: row;
+	}
+	.contact-info {
+		padding-top: 0;
+	}
+}
+
 img {
 	vertical-align: middle;
 }
