@@ -208,7 +208,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 }
 @media (min-width: 600px) {
 	.flex-parent {
@@ -216,6 +216,13 @@ h2 {
 		justify-content: center;
 		align-items: flex-start;
 	}
+}
+.dates {
+	display: flex;
+	flex-direction: row;
+}
+.date {
+	flex: 1;
 }
 .flex-child {
 	flex: 1;
@@ -260,15 +267,11 @@ h5,
 h6 {
 	font-family: "Segoe UI", Arial, sans-serif;
 	font-weight: 400;
-	margin: 10px 0;
+	margin: 0 0;
 }
 .wide {
 	letter-spacing: 4px;
 	min-width: 300px;
-}
-.image {
-	max-width: 100%;
-	height: auto;
 }
 .film-info {
 	margin-top: 25px;
@@ -281,7 +284,24 @@ h6 {
 @media (min-width: 600px) {
 	.poster {
 		margin-right: 25px;
+		margin-bottom: 25px;
 	}
+}
+.film-text {
+	flex: 1;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 img {
 	vertical-align: middle;
@@ -1233,7 +1253,12 @@ a {
 	padding: 8px 16px !important;
 }
 .padding-large {
-	padding: 12px 24px !important;
+	padding: 12px 12px !important;
+}
+@media (min-width: 600px) {
+	.padding-large {
+		padding: 12px 24px !important;
+	}
 }
 .padding-16 {
 	padding-top: 16px !important;
