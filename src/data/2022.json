@@ -1,0 +1,190 @@
+{
+	"en": {
+		"yearFilms": "2022 FILMS",
+		"films": [
+			{
+				"id": 0,
+				"title": "Kernagis",
+				"description": "Kernagis is the first documentary about the maestro Vytautas Kernagis, one of the most famous Lithuanian artists of all time. This film is an irreplaceable look into his processes, thoughts, and creative being. Director Andrius Lekavičius invites viewers to enter the world of V. Kernagis, which is being opened for the first time thanks to the intimate and never-before-seen family archive."
+			},
+			{
+				"id": 1,
+				"title": "Exemplary Behaviour",
+				"description": "The film explores the paradox of exemplary behaviour of murderers currently serving life sentences in Lukiškes Prison in Vilnius and hoping to return to society."
+			},
+			{
+				"id": 2,
+				"title": "Gentle Warriors",
+				"description": "Three young girls decide to volunteer for military service after the conscription for men is reintroduced in Lithuania as a response to possible threats from neighboring Russia. The girls live and train among 600 men at an isolated military base for 9 months. How will this experience shift their physical and emotional well beings, or their mentality when they find that the true war is within themselves?"
+			},
+			{
+				"id": 3,
+				"title": "I'll Stand by You",
+				"description": "A psychologist and a police officer begin a mission to reduce the record suicide numbers in their rural Lithuania hometown. The two women work door-to-door to heal the loneliest members of the community and prove that suicide prevention can be a reality."
+			},
+			{
+				"id": 4,
+				"title": "Moncys. Samogitian de Paris",
+				"description": "Who was Antanas Mončys? A Lithuanian. A Samogitian. An emigrant. A Parisian. A son, father, husband, brother, sculptor. He traveled from a small Liothuanian town to Paris, from the shores of the Baltic sea to the thundering waves of the Atlantic, all the while carrying his Lithuanian heritage with him. He was an artist who merged an archaic Lithuanian worldview with modern Western European art to create an artform in which we can see ourselves."
+			},
+			{
+				"id": 5,
+				"title": "Back from New York",
+				"description": "Back from New York is a film about two unique artists and close friends, photographer Arūnas Kulikauskas and painter Eugenijus Varkulevičius-Varkalis, whose lives were greatly influenced by emigration to the bustling and enchanting New York City during the Soviet times. After many years abroad, they return back to their homeland to start again. Follow their story as it delves into not only their artistic discoveries in NYC, but also about their true joys of life."
+			},
+			{
+				"id": 6,
+				"title": "Blue/ Red /Deport",
+				"description": "37-year-old Afghan filmmaker Talib Shah Hossaini finds himself on the verge of losing hope after living one year in Moria, the biggest refugee camp in Europe. Instead of giving up, however, he makes a fictional film in which he explores the camp’s complex reality and indefinite future as refugees. Director Lina Luzyte observes Talib Shah, using the meta film as a magnifying glass to blow-up reality."
+			},
+			{
+				"id": 7,
+				"title": "Jump",
+				"description": "In 1970, Lithuanian sailor Simas Kudirka made a desperate leap for freedom from his Soviet vessel to a US Coast Guard cutter asking for asylum. The Americans sent him back inciting one of the Cold War's most complex and suspenseful political blunders before a stunning twist of fate."
+			}
+		]
+	},
+	"lt": {
+		"yearFilms": "2022 FILMAI",
+		"films": [
+			{
+				"id": 0,
+				"title": "Kernagis",
+				"description": "Kernagis is the first documentary about the maestro Vytautas Kernagis, one of the most famous Lithuanian artists of all time. This film is an irreplaceable look into his processes, thoughts, and creative being. Director Andrius Lekavičius invites viewers to enter the world of V. Kernagis, which is being opened for the first time thanks to the intimate and never-before-seen family archive."
+			},
+			{
+				"id": 1,
+				"title": "Exemplary Behaviour",
+				"description": "The film explores the paradox of exemplary behaviour of murderers currently serving life sentences in Lukiškes Prison in Vilnius and hoping to return to society."
+			},
+			{
+				"id": 2,
+				"title": "Gentle Warriors",
+				"description": "Three young girls decide to volunteer for military service after the conscription for men is reintroduced in Lithuania as a response to possible threats from neighboring Russia. The girls live and train among 600 men at an isolated military base for 9 months. How will this experience shift their physical and emotional well beings, or their mentality when they find that the true war is within themselves?"
+			},
+			{
+				"id": 3,
+				"title": "I'll Stand by You",
+				"description": "A psychologist and a police officer begin a mission to reduce the record suicide numbers in their rural Lithuania hometown. The two women work door-to-door to heal the loneliest members of the community and prove that suicide prevention can be a reality."
+			},
+			{
+				"id": 4,
+				"title": "Moncys. Samogitian de Paris",
+				"description": "Who was Antanas Mončys? A Lithuanian. A Samogitian. An emigrant. A Parisian. A son, father, husband, brother, sculptor. He traveled from a small Liothuanian town to Paris, from the shores of the Baltic sea to the thundering waves of the Atlantic, all the while carrying his Lithuanian heritage with him. He was an artist who merged an archaic Lithuanian worldview with modern Western European art to create an artform in which we can see ourselves."
+			},
+			{
+				"id": 5,
+				"title": "Back from New York",
+				"description": "Back from New York is a film about two unique artists and close friends, photographer Arūnas Kulikauskas and painter Eugenijus Varkulevičius-Varkalis, whose lives were greatly influenced by emigration to the bustling and enchanting New York City during the Soviet times. After many years abroad, they return back to their homeland to start again. Follow their story as it delves into not only their artistic discoveries in NYC, but also about their true joys of life."
+			},
+			{
+				"id": 6,
+				"title": "Blue/ Red /Deport",
+				"description": "37-year-old Afghan filmmaker Talib Shah Hossaini finds himself on the verge of losing hope after living one year in Moria, the biggest refugee camp in Europe. Instead of giving up, however, he makes a fictional film in which he explores the camp’s complex reality and indefinite future as refugees. Director Lina Luzyte observes Talib Shah, using the meta film as a magnifying glass to blow-up reality."
+			},
+			{
+				"id": 7,
+				"title": "Jump",
+				"description": "In 1970, Lithuanian sailor Simas Kudirka made a desperate leap for freedom from his Soviet vessel to a US Coast Guard cutter asking for asylum. The Americans sent him back inciting one of the Cold War's most complex and suspenseful political blunders before a stunning twist of fate."
+			}
+		]
+	},
+	"common": {
+		"0": {
+			"events": [
+				{
+					"date": 1665012600,
+					"address": 1
+				}
+			],
+			"trailerLink": "https://player.vimeo.com/video/688335400?h=2b47145d79&byline=0",
+			"posterName": "kernagis.png",
+			"ticketsAvailable": true
+		},
+		"1": {
+			"events": [
+				{
+					"date": 1665099000,
+					"address": 2
+				}
+			],
+			"trailerLink": "https://player.vimeo.com/video/354173099?h=e867525aea&byline=0",
+			"posterName": "pavyzdingas-elgesys.png",
+			"ticketsAvailable": false
+		},
+		"2": {
+			"events": [
+				{
+					"date": 1665185400,
+					"address": 3
+				}
+			],
+			"trailerLink": "https://player.vimeo.com/video/489901035?h=c06cae986b&byline=0",
+			"posterName": "Gentle-warriors.png",
+			"ticketsAvailable": false
+		},
+		"3": {
+			"events": [
+				{
+					"date": 1665252000,
+					"address": 3
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/WqM5Qm3ZY4E",
+			"posterName": "busiu-su-tavim.png",
+			"ticketsAvailable": false
+		},
+		"4": {
+			"events": [
+				{
+					"date": 1665333000,
+					"address": 2
+				}
+			],
+			"trailerLink": "https://player.vimeo.com/video/687869795?h=5ed339248c&byline=0",
+			"posterName": "MONCYS-PLAKATAS-1.jpg",
+			"ticketsAvailable": false
+		},
+		"5": {
+			"events": [
+				{
+					"date": 1665342000,
+					"address": 2
+				},
+				{
+					"date": 1665790200,
+					"address": 4
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/_GpTZkgJxyg",
+			"posterName": "back-from-new-york.jpg",
+			"ticketsAvailable": false
+		},
+		"6": {
+			"title": "Blue/ Red /Deport",
+			"description": "37-year-old Afghan filmmaker Talib Shah Hossaini finds himself on the verge of losing hope after living one year in Moria, the biggest refugee camp in Europe. Instead of giving up, however, he makes a fictional film in which he explores the camp’s complex reality and indefinite future as refugees. Director Lina Luzyte observes Talib Shah, using the meta film as a magnifying glass to blow-up reality.",
+			"events": [
+				{
+					"date": 1665856800,
+					"address": 3
+				}
+			],
+			"trailerLink": "https://player.vimeo.com/video/675800079?h=6de745c1d4&byline=0",
+			"posterName": "blue-red-deport.png",
+			"ticketsAvailable": false
+		},
+		"7": {
+			"title": "Jump",
+			"description": "In 1970, Lithuanian sailor Simas Kudirka made a desperate leap for freedom from his Soviet vessel to a US Coast Guard cutter asking for asylum. The Americans sent him back inciting one of the Cold War's most complex and suspenseful political blunders before a stunning twist of fate.",
+			"events": [
+				{
+					"date": 1665867600,
+					"address": 3
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/v69SGpbJaBo",
+			"posterName": "Jump.jpg",
+			"ticketsAvailable": false
+		}
+	}
+}
