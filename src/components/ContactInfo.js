@@ -4,11 +4,11 @@ const ContactInfo = () => {
 			<h2 className="wide center">CONTACT</h2>
 			<div className="contact">
 				<div className="contact-info">
-					{/* <i className="fa fa-phone" style={"width: 20px"}></i>+1 (312) 375-2728 */}
+					<i className="fa fa-phone" style={{"width": "20px"}}></i>+1 (312) 375-2728
 				</div>
 				<div className="contact-info">
 					<a href="mailto:ltdocfestival@gmail.com">
-						{/* <i className="fa fa-envelope hover-opacity" style={{"width" : "20px"}}></i> */}
+						<i className="fa fa-envelope hover-opacity" style={{"width" : "20px"}}></i>
 						ltdocfestival@gmail.com
 					</a>
 				</div>
@@ -17,7 +17,7 @@ const ContactInfo = () => {
 					<a
 						href="https://www.facebook.com/Lithuanian-Documentary-Film-Festival-LDFF-2326005537613261"
 						target="_blank">
-						{/* <i className="fa fa-facebook-official hover-opacity" style="width: 15px"></i> */}
+						<i className="fa fa-facebook-official hover-opacity" style={{"width": "15px"}}></i>
 						LDFF Festival
 					</a>
 				</div>

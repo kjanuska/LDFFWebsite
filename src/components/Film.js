@@ -1,18 +1,27 @@
 import addresses from "../data/addresses.json";
 
-const IMAGE_PATH = "../img/posters/";
+const IMAGE_PATH = "/img/posters/";
 
-const Film = ({ translation, commonInfo }) => {
+const Film = ({ translation, commonInfo, language }) => {
 	return (
 		<div>
 			{commonInfo.events.map((event) => {
 				const address = addresses[event.address];
+				const date = new Date(event.date);
+				const options = {
+					month: "long",
+					day: "numeric",
+				};
 
 				return (
 					<div key={event.date}>
-						<h4>{event.date}</h4>
+						<h4>{date.toLocaleDateString(language, options)}</h4>
 						<a className="address" href={address.link} target="_blank">
 							{address.name}
+							<br />
+							{address.line1}
+							<br />
+							{`${address.city}, ${address.state} ${address.zip}`}
 						</a>
 					</div>
 				);
@@ -36,7 +45,7 @@ const Film = ({ translation, commonInfo }) => {
 				</div>
 			</div>
 
-            <hr/>
+			<hr />
 		</div>
 	);
 };
