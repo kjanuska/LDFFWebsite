@@ -11,9 +11,9 @@ const Navigation = ({ setLanguage }) => {
 						title="Toggle Navigation Menu">
 						<i className="fa fa-bars"></i>
 					</a>
-					<a href="#" className="bar-item button padding-large hide-small">
+					{/* <a href="#" className="bar-item button padding-large hide-small">
 						LDFF 2022
-					</a>
+					</a> */}
 					<a href="#contact" className="bar-item button padding-large hide-small">
 						CONTACT
 					</a>

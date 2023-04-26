@@ -1,10 +1,11 @@
 import addresses from "../data/addresses.json";
+import BuyTickets from "./BuyTickets";
 
 const IMAGE_PATH = "/img/posters/";
 
-const Film = ({ translation, commonInfo, language }) => {
+const Film = ({ translation, commonInfo, language, year }) => {
 	return (
-		<div>
+		<div style={{ marginTop: "30px"}}>
 			{commonInfo.events.map((event) => {
 				const address = addresses[event.address];
 				const date = new Date(event.date);
@@ -13,9 +14,14 @@ const Film = ({ translation, commonInfo, language }) => {
 					day: "numeric",
 				};
 
+				const timeOptions = {
+					hour: 'numeric',
+					minute:'numeric'
+				}
+
 				return (
 					<div key={event.date}>
-						<h4>{date.toLocaleDateString(language, options)}</h4>
+						<h4>{`${date.toLocaleDateString(language, options)}, ${date.toLocaleTimeString(language, timeOptions)}`}</h4>
 						<a className="address" href={address.link} target="_blank">
 							{address.name}
 							<br />
@@ -26,13 +32,16 @@ const Film = ({ translation, commonInfo, language }) => {
 					</div>
 				);
 			})}
+
 			<div className="film-info">
 				<div className="flex-parent">
-					<img className="poster" src={`${IMAGE_PATH}${commonInfo.posterName}`} />
+					<img className="poster" src={`${IMAGE_PATH}${year}/${commonInfo.posterName}`} />
 					<div className="film-text">
 						<h3>{translation.title}</h3>
 
 						<p>{translation.description}</p>
+
+						{commonInfo.ticketUrl != null && <BuyTickets url={commonInfo.ticketUrl} language={language}/>}
 					</div>
 				</div>
 				<div className="video-wrapper">

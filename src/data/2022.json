@@ -93,98 +93,94 @@
 		"0": {
 			"events": [
 				{
-					"date": 1665012600,
+					"date": 1665012600000,
 					"address": 1
 				}
 			],
 			"trailerLink": "https://player.vimeo.com/video/688335400?h=2b47145d79&byline=0",
 			"posterName": "kernagis.png",
-			"ticketsAvailable": true
+			"ticketUrl": null
 		},
 		"1": {
 			"events": [
 				{
-					"date": 1665099000,
+					"date": 1665099000000,
 					"address": 2
 				}
 			],
 			"trailerLink": "https://player.vimeo.com/video/354173099?h=e867525aea&byline=0",
 			"posterName": "pavyzdingas-elgesys.png",
-			"ticketsAvailable": false
+			"ticketUrl": null
 		},
 		"2": {
 			"events": [
 				{
-					"date": 1665185400,
+					"date": 1665185400000,
 					"address": 3
 				}
 			],
 			"trailerLink": "https://player.vimeo.com/video/489901035?h=c06cae986b&byline=0",
 			"posterName": "Gentle-warriors.jpg",
-			"ticketsAvailable": false
+			"ticketUrl": null
 		},
 		"3": {
 			"events": [
 				{
-					"date": 1665252000,
+					"date": 1665252000000,
 					"address": 3
 				}
 			],
 			"trailerLink": "https://www.youtube.com/embed/WqM5Qm3ZY4E",
 			"posterName": "busiu-su-tavim.jpg",
-			"ticketsAvailable": false
+			"ticketUrl": null
 		},
 		"4": {
 			"events": [
 				{
-					"date": 1665333000,
+					"date": 1665333000000,
 					"address": 2
 				}
 			],
 			"trailerLink": "https://player.vimeo.com/video/687869795?h=5ed339248c&byline=0",
 			"posterName": "MONCYS-PLAKATAS-1.jpg",
-			"ticketsAvailable": false
+			"ticketUrl": null
 		},
 		"5": {
 			"events": [
 				{
-					"date": 1665342000,
+					"date": 1665342000000,
 					"address": 2
 				},
 				{
-					"date": 1665790200,
+					"date": 1665790200000,
 					"address": 4
 				}
 			],
 			"trailerLink": "https://www.youtube.com/embed/_GpTZkgJxyg",
 			"posterName": "back-from-new-york.jpg",
-			"ticketsAvailable": false
+			"ticketUrl": null
 		},
 		"6": {
-			"title": "Blue/ Red /Deport",
-			"description": "37-year-old Afghan filmmaker Talib Shah Hossaini finds himself on the verge of losing hope after living one year in Moria, the biggest refugee camp in Europe. Instead of giving up, however, he makes a fictional film in which he explores the camp’s complex reality and indefinite future as refugees. Director Lina Luzyte observes Talib Shah, using the meta film as a magnifying glass to blow-up reality.",
 			"events": [
 				{
-					"date": 1665856800,
+					"date": 1665856800000,
 					"address": 3
 				}
 			],
 			"trailerLink": "https://player.vimeo.com/video/675800079?h=6de745c1d4&byline=0",
 			"posterName": "blue-red-deport.png",
-			"ticketsAvailable": false
+			"ticketUrl": null
 		},
 		"7": {
-			"title": "Jump",
-			"description": "In 1970, Lithuanian sailor Simas Kudirka made a desperate leap for freedom from his Soviet vessel to a US Coast Guard cutter asking for asylum. The Americans sent him back inciting one of the Cold War's most complex and suspenseful political blunders before a stunning twist of fate.",
 			"events": [
 				{
-					"date": 1665867600,
+					"date": 1665867600000,
 					"address": 3
 				}
 			],
 			"trailerLink": "https://www.youtube.com/embed/v69SGpbJaBo",
 			"posterName": "Jump.jpg",
-			"ticketsAvailable": false
+			"ticketUrl": null
 		}
 	}
 }
