@@ -1,0 +1,162 @@
+{
+	"year": "2023",
+	"en": {
+		"yearFilms": "FILMS",
+		"films": [
+			{
+				"id": 0,
+				"title": "Thug Rose: Mixed Martial Artist",
+				"description": ""
+			},
+			{
+				"id": 1,
+				"title": "A Nineteenth - Century Photograph’s Legacy",
+				"description": ""
+			},
+			{
+				"id": 2,
+				"title": "Good life",
+				"description": ""
+			},
+			{
+				"id": 3,
+				"title": "Stumbled over a stone",
+				"description": ""
+			},
+			{
+				"id": 4,
+				"title": "Burial",
+				"description": ""
+			},
+			{
+				"id": 5,
+				"title": "Decadent No. 2419",
+				"description": ""
+			},
+			{
+				"id": 6,
+				"title": "Mariupolis 2",
+				"description": ""
+			}
+		]
+	},
+	"lt": {
+		"yearFilms": "FILMAI",
+		"films": [
+			{
+				"id": 0,
+				"title": "Roze Namajunas",
+				"description": ""
+			},
+			{
+				"id": 1,
+				"title": "XIX amžiaus fotografo palikimas",
+				"description": ""
+			},
+			{
+				"id": 2,
+				"title": "Geras gyvenimas",
+				"description": ""
+			},
+			{
+				"id": 3,
+				"title": "Nešėm, kol pavargom",
+				"description": ""
+			},
+			{
+				"id": 4,
+				"title": "Kapinynas",
+				"description": ""
+			},
+			{
+				"id": 5,
+				"title": "Dekadentas Nr. 2419",
+				"description": ""
+			},
+			{
+				"id": 6,
+				"title": "Mariupolis 2",
+				"description": ""
+			}
+		]
+	},
+	"common": {
+		"0": {
+			"events": [
+				{
+					"date": 1682551800000,
+					"address": 5
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/b2Jggdf1VSM",
+			"posterName": "thug_rose.jpg",
+			"ticketUrl": "https://buytickets.at/bravobitesinc/880547"
+		},
+		"1": {
+			"events": [
+				{
+					"date": 1682638200000,
+					"address": 2
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/33XK_YAG76k",
+			"posterName": "fotografo.jpg",
+			"ticketUrl": null
+		},
+		"2": {
+			"events": [
+				{
+					"date": 1682724600000,
+					"address": 3
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/6pk73Rc7QVQ",
+			"posterName": "geras_gyvenimas.jpg",
+			"ticketUrl": null
+		},
+		"3": {
+			"events": [
+				{
+					"date": 1682794800000,
+					"address": 2
+				}
+			],
+			"trailerLink": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100063079457505%2Fvideos%2F976202083007867%2F&width=500&show_text=false&height=282&appId",
+			"posterName": "nesem_kol_pavargom.png",
+			"ticketUrl": null
+		},
+		"4": {
+			"events": [
+				{
+					"date": 1682802000000,
+					"address": 2
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/U2HtgGQyr2w",
+			"posterName": "burial.jpg",
+			"ticketUrl": null
+		},
+		"5": {
+			"events": [
+				{
+					"date": 1682872200000,
+					"address": 2
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/fh4cKgFAGvs",
+			"posterName": "dekadentas.jpg",
+			"ticketUrl": null
+		},
+		"6": {
+			"events": [
+				{
+					"date": 1682895600000,
+					"address": 5
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/Iyt_zvyFL6s",
+			"posterName": "mariupolis.jpg",
+			"ticketUrl": "https://buytickets.at/bravobitesinc/880553"
+		}
+	}
+}
