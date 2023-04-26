@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/LDFFWebsite/static/css/main.8a776235.css",
+    "main.js": "/LDFFWebsite/static/js/main.bc3576ba.js",
+    "index.html": "/LDFFWebsite/index.html",
+    "main.8a776235.css.map": "/LDFFWebsite/static/css/main.8a776235.css.map",
+    "main.bc3576ba.js.map": "/LDFFWebsite/static/js/main.bc3576ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a776235.css",
+    "static/js/main.bc3576ba.js"
+  ]
+}
