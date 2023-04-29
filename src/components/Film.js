@@ -8,7 +8,7 @@ const Film = ({ translation, commonInfo, language, year }) => {
 		<div style={{ marginTop: "30px"}}>
 			{commonInfo.events.map((event) => {
 				const address = addresses[event.address];
-				const date = new Date(event.date);
+				const date = new Date(event.date + (60 * 60 * 1000));
 				const options = {
 					month: "long",
 					day: "numeric",
