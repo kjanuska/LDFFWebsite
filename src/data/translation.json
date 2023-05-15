@@ -4,13 +4,17 @@
 		"sponsors": "SPONSORS",
 		"contactTitle": "CONTACT",
 		"contactFestival": "LDFF Festival",
-		"buyTickets": "Buy Tickets"
+		"buyTickets": "Buy Tickets",
+        "photos": "Photos",
+        "photographers": "Photographers"
 	},
 	"lt": {
 		"mainTitle": "LIETUVIŠKŲ DOKUMENTINIŲ FILMŲ FESTIVALIS",
 		"sponsors": "SPONSORIAI",
 		"contactTitle": "KONTAKTAS",
 		"contactFestival": "LDFF Festivalis",
-		"buyTickets": "Pirkti Bilietus"
+		"buyTickets": "Pirkti Bilietus",
+        "photos": "Nuotraukos",
+        "photographers": "Fotografai"
 	}
 }

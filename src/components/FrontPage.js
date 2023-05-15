@@ -8,7 +8,7 @@ import translations from "../data/translation.json";
 
 const FrontPage = ({ language }) => {
 	return (
-		<div className="content">
+		<>
 			<div className="container content center padding-64" style={{"maxWidth": "1000px"}}>
 				<img src="../img/logos/ldff-logo.png" alt="LDFF logo" width="100" height="100" />
 				<h1 className="wide title">{translations[language].mainTitle}</h1>
@@ -28,7 +28,7 @@ const FrontPage = ({ language }) => {
 			<Sponsors />
 
 			<ContactInfo />
-		</div>
+		</>
 	);
 };
 

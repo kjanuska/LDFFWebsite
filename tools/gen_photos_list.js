@@ -3,7 +3,7 @@ const sizeOf = require('image-size');
 
 const PUBLIC_PATH = './public';
 const BASE_PATH = '/img/events/';
-const YEAR = 2022;
+const YEAR = 2023;
 
 const photos = [];
 
