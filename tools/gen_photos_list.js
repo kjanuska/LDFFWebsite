@@ -17,4 +17,5 @@ fs.readdirSync(PUBLIC_PATH + BASE_PATH + YEAR).forEach((file) => {
     });
 });
 
-console.log(photos);
+// very hacky
+fs.writeFileSync(`./src/data/photos/photos${YEAR}.js`, `const photos = ${JSON.stringify(photos)};\n\nexport default photos;`);
