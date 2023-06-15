@@ -5,10 +5,18 @@ const IMAGE_PATH = "/img/posters/";
 
 const Film = ({ translation, commonInfo, language, year }) => {
 	return (
-		<div style={{ marginTop: "30px"}}>
-			{commonInfo.events.map((event) => {
+		<div style={{ marginTop: "30px" }}>
+			{commonInfo.events.filter((event) => {
+				const eventDate = new Date(event.date + (60 * 60 * 1000));
+				const now = new Date()
+				now.setDate(now.getDate() + 7);
+
+				// hide events that are more than a week old
+				return eventDate > now;
+			}).map((event, index) => {
 				const address = addresses[event.address];
 				const date = new Date(event.date + (60 * 60 * 1000));
+
 				const options = {
 					month: "long",
 					day: "numeric",
@@ -16,11 +24,11 @@ const Film = ({ translation, commonInfo, language, year }) => {
 
 				const timeOptions = {
 					hour: 'numeric',
-					minute:'numeric'
+					minute: 'numeric'
 				}
 
 				return (
-					<div key={event.date}>
+					<div key={`${commonInfo.posterName}${index}`}>
 						<h4>{`${date.toLocaleDateString(language, options)}, ${date.toLocaleTimeString(language, timeOptions)}`}</h4>
 						<a className="address" href={address.link} target="_blank">
 							{address.name}
@@ -41,7 +49,7 @@ const Film = ({ translation, commonInfo, language, year }) => {
 
 						<p>{translation.description}</p>
 
-						{commonInfo.ticketUrl != null && <BuyTickets url={commonInfo.ticketUrl} language={language}/>}
+						{commonInfo.ticketUrl != null && <BuyTickets url={commonInfo.ticketUrl} language={language} />}
 					</div>
 				</div>
 				<div className="video-wrapper">
