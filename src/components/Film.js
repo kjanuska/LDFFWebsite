@@ -26,10 +26,12 @@ const Film = ({ translation, commonInfo, language, year }) => {
 					hour: 'numeric',
 					minute: 'numeric'
 				}
-
+				
+				let dateString = date.toLocaleDateString(language, options);
+				dateString = dateString.charAt(0).toUpperCase() + dateString.slice(1);
 				return (
 					<div key={`${commonInfo.posterName}${index}`}>
-						<h4>{`${date.toLocaleDateString(language, options)}, ${date.toLocaleTimeString(language, timeOptions)}`}</h4>
+						<h4>{`${dateString}, ${date.toLocaleTimeString(language, timeOptions)}`}</h4>
 						<a className="address" href={address.link} target="_blank">
 							{address.name}
 							<br />
