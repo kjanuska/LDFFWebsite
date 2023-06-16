@@ -1,42 +1,50 @@
 {
-    "1": {
-        "name": "Classic Cinemas Lake Theatre",
-        "line1": "1022 Lake Street",
-        "city": "Oak Park",
-        "state": "IL",
-        "zip": "60301",
-        "link": "https://g.page/ClassicLake?share"
-    },
-    "2": {
-        "name": "LWC West End",
-        "line1": "14911 127th Street",
-        "city": "Lemont",
-        "state": "IL",
-        "zip": "60439",
-        "link": "https://goo.gl/maps/phe92TDgXC9FcBp48"
-    },
-    "3": {
-        "name": "Balzekas Museum Of Lithuanian Culture",
-        "line1": "6500 South Pulaski Road",
-        "city": "Chicago",
-        "state": "IL",
-        "zip": "60629",
-        "link": "https://goo.gl/maps/XDDJmLWbuJdrshyQ8"
-    },
-    "4": {
-        "name": "Lithuanian Art Gallery Ciurlionis",
-        "line1": "5620 South Claremont Avenue",
-        "city": "Chicago",
-        "state": "IL",
-        "zip": "60636",
-        "link": "https://goo.gl/maps/gaPAkoYqauLbVoLw7" 
-    },
-    "5": {
-        "name": "North Riverside, Classic Cinemas ",
-        "line1": "7501 Cermak Road",
-        "city": "Riverside",
-        "state": "IL",
-        "zip": "60546",
-        "link": "https://goo.gl/maps/QdzKFFA3ZFgwMzvS8" 
-    }
+	"1": {
+		"name": "Classic Cinemas Lake Theatre",
+		"line1": "1022 Lake Street",
+		"city": "Oak Park",
+		"state": "IL",
+		"zip": "60301",
+		"link": "https://g.page/ClassicLake?share"
+	},
+	"2": {
+		"name": "LWC West End",
+		"line1": "14911 127th Street",
+		"city": "Lemont",
+		"state": "IL",
+		"zip": "60439",
+		"link": "https://goo.gl/maps/phe92TDgXC9FcBp48"
+	},
+	"3": {
+		"name": "Balzekas Museum Of Lithuanian Culture",
+		"line1": "6500 South Pulaski Road",
+		"city": "Chicago",
+		"state": "IL",
+		"zip": "60629",
+		"link": "https://goo.gl/maps/XDDJmLWbuJdrshyQ8"
+	},
+	"4": {
+		"name": "Lithuanian Art Gallery Ciurlionis",
+		"line1": "5620 South Claremont Avenue",
+		"city": "Chicago",
+		"state": "IL",
+		"zip": "60636",
+		"link": "https://goo.gl/maps/gaPAkoYqauLbVoLw7"
+	},
+	"5": {
+		"name": "North Riverside, Classic Cinemas ",
+		"line1": "7501 Cermak Road",
+		"city": "Riverside",
+		"state": "IL",
+		"zip": "60546",
+		"link": "https://goo.gl/maps/QdzKFFA3ZFgwMzvS8"
+	},
+	"6": {
+		"name": "Classic Cinemas Tivoli Theatre",
+		"line1": "5021 Highland Ave",
+		"city": "Downers Grove",
+		"state": "IL",
+		"zip": "60515",
+		"link": "https://goo.gl/maps/FA8nvALt5as9GgE87"
+	}
 }
