@@ -7,7 +7,7 @@ const Film = ({ translation, commonInfo, language, year }) => {
 	return (
 		<div style={{ marginTop: "30px" }}>
 			{commonInfo.events.filter((event) => {
-				const eventDate = new Date(event.date + (60 * 60 * 1000));
+				const eventDate = new Date(event.date);
 				const now = new Date()
 				now.setDate(now.getDate() + 7);
 
@@ -15,7 +15,7 @@ const Film = ({ translation, commonInfo, language, year }) => {
 				return eventDate > now;
 			}).map((event, index) => {
 				const address = addresses[event.address];
-				const date = new Date(event.date + (60 * 60 * 1000));
+				const date = new Date(event.date);
 
 				const options = {
 					month: "long",
@@ -26,7 +26,7 @@ const Film = ({ translation, commonInfo, language, year }) => {
 					hour: 'numeric',
 					minute: 'numeric'
 				}
-				
+
 				let dateString = date.toLocaleDateString(language, options);
 				dateString = dateString.charAt(0).toUpperCase() + dateString.slice(1);
 				return (
@@ -54,14 +54,15 @@ const Film = ({ translation, commonInfo, language, year }) => {
 						{commonInfo.ticketUrl != null && <BuyTickets url={commonInfo.ticketUrl} language={language} />}
 					</div>
 				</div>
-				<div className="video-wrapper">
-					<iframe
-						src={commonInfo.trailerLink}
-						width="640"
-						height="360"
-						allow="autoplay; fullscreen; picture-in-picture"
-						allowFullScreen></iframe>
-				</div>
+				{commonInfo.trailerLink !== "" &&
+					<div className="video-wrapper">
+						<iframe
+							src={commonInfo.trailerLink}
+							width="640"
+							height="360"
+							allow="autoplay; fullscreen; picture-in-picture"
+							allowFullScreen></iframe>
+					</div>}
 			</div>
 
 			<hr />

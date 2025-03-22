@@ -1,0 +1,210 @@
+{
+	"year": "2024",
+	"en": {
+		"yearFilms": "FILMS",
+		"films": [
+			{
+				"id": 0,
+				"title": "Mamutų medžioklė",
+				"description": ""
+			},
+			{
+				"id": 1,
+				"title": "Homo Vilutis",
+				"description": ""
+			},
+			{
+				"id": 2,
+				"title": "Ticket",
+				"description": ""
+			},
+			{
+				"id": 3,
+				"title": "Modernus butas",
+				"description": ""
+			},
+			{
+				"id": 4,
+				"title": "Gyvenimas po mirties",
+				"description": ""
+			},
+			{
+				"id": 5,
+				"title": "Mūza",
+				"description": ""
+			},
+			{
+				"id": 6,
+				"title": "The Trip",
+				"description": ""
+			},
+			{
+				"id": 7,
+				"title": "Buona Sera",
+				"description": ""
+			},
+			{
+				"id": 8,
+				"title": "Swimmer",
+				"description": ""
+			},
+			{
+				"id": 9,
+				"title": "Impermanence",
+				"description": ""
+			},
+			{
+				"id": 10,
+				"title": "Mael Loizance portretas: gyvenimas laipiojant",
+				"description": ""
+			}
+		]
+	},
+	"lt": {
+		"yearFilms": "FILMAI",
+		"films": [
+			{
+				"id": 0,
+				"title": "Mamutų medžioklė",
+				"description": "Tai kelionė laiku, bandant įminti vieną labiausiai intriguojančių Lietuvos teatro paslapčių. Sovietų cenzūrai uždraudus itin populiarų režisieriaus Jono Jurašo Kauno dramos teatre pastatytą spektaklį „Mamutų medžioklė“, sumanoma slapta jį nufilmuoti. Susirinkusi naktį teatre, trupė suvaidina spektaklį prieš kino kameras. Deja, kino juosta su nufilmuotu spektakliu mįslingai dingsta, o J. Jurašo likimas pasikeičia dramatiškai: režisierius netrukus priverstas palikti ne tik teatrą, bet ir Lietuvą. Nors detektyvinėje istorijoje intriga sutelkta į dingusios spektaklio juostos medžioklę, ne mažiau įdomi ir režisieriaus J. Jurašo drama."
+			},
+			{
+				"id": 1,
+				"title": "Homo Vilutis",
+				"description": "Tai grafiko, mąstytojo ir rašytojo Mikalojaus Povilo Vilučio portretas apie asketiškai gyvenantį autoironišką, aštraus proto žmogų, žaismingai tyrinėjantį savos psichikos ir kūrybiškumo paribius. Šmaikštus ir charizmatiškas menininkas nebijo kalbėti apie mirtį, tačiau jos visai nelaukia, nes dar turi nebaigtų darbų ir daugybę laukiančių povandeninių medžioklių. Tai filmas apie kiekviename mūsų glūdintį genialų paprastumą, tobulumo ir amžinybės ilgesį, iki kurių nėra taip lengva prasibrauti."
+			},
+			{
+				"id": 2,
+				"title": "Bilietas",
+				"description": "Krepšininkai aikštelėje, verslininkai laisvalaikiu ir laisvės dvasios nešėjai Lietuvoje – tokia 1979–1989 metų Kauno „Žalgirio“ komanda. A. Sabonis, R. Kurtinaitis, V. Chomičius, G. Krapikas, S. Jovaiša, V. Garastas ir kiti legendiniai krepšinio veidai prisimena sunkias treniruotes, tautiečių palaikymą ir ne visada legalius nuotykius už geležinės sienos."
+			},
+			{
+				"id": 3,
+				"title": "Modernus butas",
+				"description": "Tai vizualus pasakojimas apie menininko gyvenamąją vietą kaip kūrybinę erdvę, kurioje (iš)nyksta ribos tarp kasdienybės ir kūrybos. Čia praėjęs dešimties metų gyvenimo tarpsnis tarsi kūrybos sala tampa paminklu ir kūrybinės erdvės manifestacija."
+			},
+			{
+				"id": 4,
+				"title": "Gyvenimas po mirties",
+				"description": "Dokumentinio filmo centre – aktoriai Juozas Budraitis, Rasa Samuolytė, Dainius Gavenonis ir Lukas Malinauskas, kine suvaidinę savo pačių mirtį arba įkūniję artimųjų netekusius personažus. Ką reiškia vaidinti mirtį? Ar kine vaidinamo personažo mirtis keičia santykį su būsima „tikra“ mirtimi? Galbūt suvaidinta mirtis ugdo ironiją ir gebėjimą pasijuokti? Filmo idėja – per aktorių portretus atskleisti ryšį tarp mirties kine ir gyvenimo už aikštelės ribų."
+			},
+			{
+				"id": 5,
+				"title": "Mūza",
+				"description": "Šis filmas – kelionė tarp Vilniaus, Paryžiaus ir Ženevos – kartu su genialia Lietuvos pianiste, žavingąja Mūza Rubackyte-Golay veda į aukštosios muzikos grožio pasaulį. Tačiau, kaip kiekviena gyvenimo sėkmės istorija, taip ir Mūzos istorija, turi savyje didelių dramų, juolab, kad jos jaunystės troškimus ir svajones įkalino hermetiškoje aplinkoje sovietų režimas. Atviras menininkės pasakojimas, apie tai, ką reiškia laisvė, meilė, pašaukimas, ir kokia jos talento atskleidimo kaina."
+			},
+			{
+				"id": 6,
+				"title": "Reisas",
+				"description": "1975 m. Klaipėdos uostas, Lietuvos TSR. Laivo „Nemunėlis“ įgula atsisveikina su žmonomis ir leidžiasi į penkis mėnesius truksiantį reisą – žvejybą Atlanto vandenyne prie vakarinių Afrikos žemyno krantų. Nors laivas nutolsta per tūkstančius kilometrų nuo geležinės uždangos, bet jos šešėlis slenka paskui žvejus."
+			},
+			{
+				"id": 7,
+				"title": "Buona Sera",
+				"description": "Filmas pasakoja apie po Pietų Europą klajojančius performanso menininkus, pasivadinusius žaismingu „Circo Soluna“ vardu. Jų namai – arklių traukiami ryškiaspalviai vagonai, neturintys nei šiuolaikiniam žmogui įprastų buities patogumų, nei interneto ryšio. Net ir „virtuvė“ – mažas ponio traukiamas vagonėlis, kuriame sudėti pagrindiniai nedūžtantys indai ir daugiausia miestelių gyventojų sunešti jų pačių užauginti ar pagaminti produktai. Atrodo, kad čia vyrauja utopinė laisvė, tačiau su kiekviena diena prasideda nauji išbandymai."
+			},
+			{
+				"id": 8,
+				"title": "Plaukikas",
+				"description": "Dokumentinis filmas apie sudėtingo likimo žmogų, kurio gyvenimas paženklintas dugno ir vilties kontrastų. Ilgus metus skandinęsis svaigaluose, gyvendamas automobilyje, galiausiai neteko kojų ir atsidūrė nakvynės namuose. Netrukus suvokė, kad kita stotelė – kapinės, ir be jokios pagalbos išbrido iš nuosmukio. Šiandien Vladimiras plaukia – ne tik sportuojant kurdamas naują gyvenimą, bet ir gerindamas Lietuvos paralimpinius rekordus. O pinigų baseinui „uždirba“ prašydamas išmaldos."
+			},
+			{
+				"id": 9,
+				"title": "Nepastovumas",
+				"description": ""
+			},
+			{
+				"id": 10,
+				"title": "Mael Loizance portretas: gyvenimas laipiojant",
+				"description": ""
+			}
+		]
+	},
+	"common": {
+		"0": {
+			"events": [
+				{
+					"date": 1713382200000,
+					"address": 5
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/_Ng-r28Q3gE?si=tSoHPX9ymfz5kzQy",
+			"posterName": "mamutu_medziokle.jpg"
+		},
+		"1": {
+			"events": [
+				{
+					"date": 1713555000000,
+					"address": 4
+				}
+			],
+			"trailerLink": "https://youtu.be/embed/7EBxlRIDGJI?si=7oDOlVlF5N1VBU1D",
+			"posterName": "homo_vilutis.webp"
+		},
+		"2": {
+			"events": [
+				{
+					"date": 1713726000000,
+					"address": 5
+				}
+			],
+			"trailerLink": "https://youtu.be/embed/IJUw3elgEbk?si=aLimOKVbKW2YRC41",
+			"posterName": "bilietas.jpg"
+		},
+		"3": {
+			"events": [
+				{
+					"date": 1713630600000,
+					"address": 3
+				}
+			],
+			"trailerLink": "https://www.youtube.com/embed/watch?v=1Z67-ngLKCw",
+			"posterName": "modernus_butas.jpg"
+		},
+		"4": {
+			"events": [
+				{
+					"date": 1713621600000,
+					"address": 3
+				}
+			],
+			"trailerLink": "https://youtu.be/embed/ZhqcJdPOw7g?si=2_EA8YEVODcIcNsl",
+			"posterName": "gyvenmias_po_mirties.jpg"
+		},
+		"5": {
+			"events": [
+				{
+					"date": 1713704400000,
+					"address": 7
+				}
+			],
+			"trailerLink": "https://youtu.be/embed/ltVB891yDF0?si=TAmq2-vqijcJ8kKc",
+			"posterName": "muza.jpg"
+		},
+		"6": {
+			"events": [],
+			"trailerLink": "https://youtu.be/embed/TSTTE-WJP7E?si=9fH1TAeHco43-7fT",
+			"posterName": "Reisas_LT.jpg"
+		},
+		"7": {
+			"events": [],
+			"trailerLink": "https://player.vimeo.com/video/786705686?h=44c8ab8f86",
+			"posterName": "buona_sera.jpg"
+		},
+		"8": {
+			"events": [],
+			"trailerLink": "https://www.youtube.com/embed/watch?v=QfLNvuW6nPI",
+			"posterName": "plaukikas.jpg"
+		},
+		"9": {
+			"events": [],
+			"trailerLink": "https://youtu.be/embed/dMfVH-6ZPiE?si=9-cmBmqKaXMV6q4t",
+			"posterName": ""
+		},
+		"10": {
+			"events": [],
+			"trailerLink": "",
+			"posterName": ""
+		}
+	}
+}

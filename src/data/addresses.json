@@ -32,7 +32,7 @@
 		"link": "https://goo.gl/maps/gaPAkoYqauLbVoLw7"
 	},
 	"5": {
-		"name": "North Riverside, Classic Cinemas ",
+		"name": "Classic Cinemas North Riverside",
 		"line1": "7501 Cermak Road",
 		"city": "Riverside",
 		"state": "IL",
@@ -46,5 +46,37 @@
 		"state": "IL",
 		"zip": "60515",
 		"link": "https://goo.gl/maps/FA8nvALt5as9GgE87"
+	},
+	"7": {
+		"name": "Ramova Theater",
+		"line1": "3520 South Halsted St",
+		"city": "Chicago",
+		"state": "IL",
+		"zip": "60609",
+		"link": "https://maps.app.goo.gl/LtaCk8CR89Qbz9pL7"
+	},
+	"8": {
+		"name": "Classic Cinemas Oak Park",
+		"line1": "1022 Lake St",
+		"city": "Oak Park",
+		"state": "IL",
+		"zip": "60301",
+		"link": "https://maps.app.goo.gl/VfzKcM4WqbiM4h4x9"
+	},
+	"9": {
+		"name": "Lithuanian Museum of Art",
+		"line1": "14911 127th St",
+		"city": "Lemont",
+		"state": "IL",
+		"zip": "60439",
+		"link": "https://maps.app.goo.gl/hn2JqZ1kVGNFpMzb8"
+	},
+	"10": {
+		"name": "FACETS",
+		"line1": "1517 W Fullerton Ave",
+		"city": "Chicago",
+		"state": "IL",
+		"zip": "60614",
+		"link": "https://maps.app.goo.gl/5WhucYvcxCKRexeJ9"
 	}
 }
