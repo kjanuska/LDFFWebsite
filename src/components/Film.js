@@ -49,7 +49,7 @@ const Film = ({ translation, commonInfo, language, year }) => {
 					<div className="film-text">
 						<h3>{translation.title}</h3>
 
-						<p>{translation.description}</p>
+						<p className="description">{translation.description}</p>
 
 						{commonInfo.ticketUrl != null && <BuyTickets url={commonInfo.ticketUrl} language={language} />}
 					</div>

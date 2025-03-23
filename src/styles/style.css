@@ -18,6 +18,9 @@ html {
 	font-weight: 700;
 	text-align: center;
 }
+.description {
+	white-space: pre-line;
+}
 .flex-parent {
 	display: flex;
 	flex-direction: column;
