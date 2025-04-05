@@ -45,7 +45,7 @@ const Film = ({ translation, commonInfo, language, year }) => {
 
 			<div className="film-info">
 				<div className="flex-parent">
-					<img className="poster" src={`${IMAGE_PATH}${year}/${commonInfo.posterName}`} />
+					<img className="poster" src={`${IMAGE_PATH}${year}/${translation.posterName}`} />
 					<div className="film-text">
 						<h3>{translation.title}</h3>
 
@@ -54,10 +54,10 @@ const Film = ({ translation, commonInfo, language, year }) => {
 						{commonInfo.ticketUrl != null && <BuyTickets url={commonInfo.ticketUrl} language={language} />}
 					</div>
 				</div>
-				{commonInfo.trailerLink !== "" &&
+				{translation.trailerLink !== "" &&
 					<div className="video-wrapper">
 						<iframe
-							src={commonInfo.trailerLink}
+							src={translation.trailerLink}
 							width="640"
 							height="360"
 							allow="autoplay; fullscreen; picture-in-picture"

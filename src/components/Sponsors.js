@@ -29,7 +29,7 @@ const Sponsors = () => {
                 <img src={`${SPONSOR_PATH}atlantic.jpg`} />
                 <img src={`${SPONSOR_PATH}image001.png`} />
                 <img src={`${SPONSOR_PATH}bravo_bites.png`} />
-                <img src={`${SPONSOR_PATH}CSCI-Vilnius-Anniversary (1).JPG`} />
+                <img src={`${SPONSOR_PATH}petras.png`} />
             </div>
         </div>
     );
