@@ -6,14 +6,7 @@ const IMAGE_PATH = "/img/posters/";
 const Film = ({ translation, commonInfo, language, year }) => {
 	return (
 		<div style={{ marginTop: "30px" }}>
-			{commonInfo.events.filter((event) => {
-				const eventDate = new Date(event.date);
-				const now = new Date()
-				now.setDate(now.getDate() + 7);
-
-				// hide events that are more than a week old
-				return eventDate > now;
-			}).map((event, index) => {
+			{commonInfo.events.map((event, index) => {
 				const address = addresses[event.address];
 				const date = new Date(event.date);
 
@@ -24,7 +17,8 @@ const Film = ({ translation, commonInfo, language, year }) => {
 
 				const timeOptions = {
 					hour: 'numeric',
-					minute: 'numeric'
+					minute: 'numeric',
+					timeZone: 'America/Chicago',
 				}
 
 				let dateString = date.toLocaleDateString(language, options);
