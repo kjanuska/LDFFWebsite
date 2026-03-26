@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:svelte.dev)",
+      "Bash(npm create svelte@latest . -- --template skeleton --types typescript)",
+      "Bash(npx sv create . --template minimal --types ts --no-install)",
+      "Bash(npx sv create . --template minimal --types ts --no-install --force-write)",
+      "Bash(npx sv create . --template minimal --types ts --no-install --no-add-ons --no-dir-check)",
+      "Bash(npm install)",
+      "Bash(npm install -D @sveltejs/adapter-static lucide-svelte tsx csv-parse)",
+      "Bash(npx tsx scripts/build-data.ts)",
+      "Bash(npm run build)",
+      "Bash(npm install --save-dev @types/node)",
+      "Bash(cd:*)"
+    ]
+  }
+}
