@@ -10,15 +10,15 @@
 		</div>
 
 		<div class="footer-social">
-			<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+			<!-- <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
 				<Instagram size={20} />
-			</a>
-			<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+			</a> -->
+			<a href="https://www.facebook.com/people/Lithuanian-Documentary-Film-Festival-LDFF/100060742333221" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
 				<Facebook size={20} />
 			</a>
-			<a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+			<!-- <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
 				<Youtube size={20} />
-			</a>
+			</a> -->
 		</div>
 	</div>
 </footer>

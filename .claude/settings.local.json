@@ -11,7 +11,9 @@
       "Bash(npx tsx scripts/build-data.ts)",
       "Bash(npm run build)",
       "Bash(npm install --save-dev @types/node)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(npm run build:data)",
+      "Bash(npm install sharp --save-dev)"
     ]
   }
 }

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Lang } from '$lib/types';
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 	import { Globe } from 'lucide-svelte';
 
 	interface Props {
@@ -11,13 +12,32 @@
 
 	let enPath = $derived($page.url.pathname.replace(`/${lang}`, '/en'));
 	let ltPath = $derived($page.url.pathname.replace(`/${lang}`, '/lt'));
+
+	function switchLanguage(newLang: Lang) {
+		const newPath = newLang === 'en' ? enPath : ltPath;
+		goto(newPath, { noScroll: true });
+	}
 </script>
 
 <nav class="lang-switch" aria-label="Language">
 	<Globe size={14} />
-	<a href={enPath} class:active={lang === 'en'} aria-current={lang === 'en' ? 'page' : undefined}>EN</a>
+	<button
+		onclick={() => switchLanguage('en')}
+		class:active={lang === 'en'}
+		aria-current={lang === 'en' ? 'page' : undefined}
+		aria-label="Switch to English"
+	>
+		EN
+	</button>
 	<span aria-hidden="true">/</span>
-	<a href={ltPath} class:active={lang === 'lt'} aria-current={lang === 'lt' ? 'page' : undefined}>LT</a>
+	<button
+		onclick={() => switchLanguage('lt')}
+		class:active={lang === 'lt'}
+		aria-current={lang === 'lt' ? 'page' : undefined}
+		aria-label="Switch to Lithuanian"
+	>
+		LT
+	</button>
 </nav>
 
 <style>
@@ -30,12 +50,19 @@
 		letter-spacing: 0.05em;
 	}
 
-	a {
+	button {
+		background: none;
+		border: none;
 		padding: 2px 4px;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		letter-spacing: inherit;
 		transition: color var(--transition-fast);
 	}
 
-	a:hover {
+	button:hover {
 		color: var(--color-flag-yellow);
 	}
 
@@ -43,7 +70,7 @@
 		color: var(--color-black);
 	}
 
-	a:not(.active) {
+	button:not(.active) {
 		color: var(--color-gray-400);
 	}
 

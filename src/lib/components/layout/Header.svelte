@@ -96,13 +96,13 @@
 	}
 
 	/* override LanguageSwitcher colors inside dark header */
-	:global(.header .lang-switch a) {
+	:global(.header .lang-switch button) {
 		color: rgba(255, 255, 255, 0.5);
 	}
-	:global(.header .lang-switch a.active) {
+	:global(.header .lang-switch button.active) {
 		color: var(--color-white);
 	}
-	:global(.header .lang-switch a:hover) {
+	:global(.header .lang-switch button:hover) {
 		color: var(--color-accent);
 	}
 	:global(.header .lang-switch span) {

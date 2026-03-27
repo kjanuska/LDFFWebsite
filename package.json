@@ -10,7 +10,9 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"convert:sponsors": "node scripts/convert-sponsors-to-svg.js",
+		"compress:sponsors": "node scripts/compress-sponsor-svgs.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^7.0.0",
@@ -20,6 +22,7 @@
 		"@types/node": "^25.3.3",
 		"csv-parse": "^6.1.0",
 		"lucide-svelte": "^0.575.0",
+		"sharp": "^0.34.5",
 		"svelte": "^5.51.0",
 		"svelte-check": "^4.4.2",
 		"tsx": "^4.21.0",

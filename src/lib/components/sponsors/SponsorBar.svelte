@@ -16,21 +16,33 @@
 		<h2>{strings.sponsors.title}</h2>
 		<div class="sponsor-grid">
 			{#each sponsors as sponsor}
-				<a
-					href={sponsor.url}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="sponsor-link"
-					title={sponsor.sponsor_name}
-				>
-					<img
-						src="/images/sponsors/{sponsor.logo_filename}"
-						alt={sponsor.sponsor_name}
-						loading="lazy"
-						decoding="async"
-						class="sponsor-logo"
-					/>
-				</a>
+				{#if sponsor.url}
+					<a
+						href={sponsor.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="sponsor-link"
+						title={sponsor.sponsor_name}
+					>
+						<img
+							src="/images/sponsors/{sponsor.logo_filename}"
+							alt={sponsor.sponsor_name}
+							loading="lazy"
+							decoding="async"
+							class="sponsor-logo"
+						/>
+					</a>
+				{:else}
+					<div class="sponsor-item" title={sponsor.sponsor_name}>
+						<img
+							src="/images/sponsors/{sponsor.logo_filename}"
+							alt={sponsor.sponsor_name}
+							loading="lazy"
+							decoding="async"
+							class="sponsor-logo"
+						/>
+					</div>
+				{/if}
 			{/each}
 		</div>
 	</section>
@@ -38,11 +50,11 @@
 
 <style>
 	.sponsors {
-		background: var(--color-gray-100);
-		margin-inline: calc(-1 * var(--content-padding));
+		background: rgb(255, 255, 255);
 		padding-inline: var(--content-padding);
 		padding-block: var(--space-xl);
 		margin-top: var(--space-xl);
+		border-top: 1px solid var(--color-gray-200);
 	}
 
 	h2 {
@@ -62,28 +74,36 @@
 		align-items: center;
 		justify-content: center;
 		gap: var(--space-xl);
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 
-	.sponsor-link {
-		display: block;
+	.sponsor-link,
+	.sponsor-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 160px;
+		height: 80px;
+		flex-shrink: 0;
 	}
 
 	.sponsor-logo {
-		height: 48px;
+		max-height: 64px;
+		max-width: 100%;
 		width: auto;
-		filter: grayscale(100%);
-		opacity: 0.5;
+		height: auto;
+		object-fit: contain;
 		transition: all var(--transition-base);
 	}
 
 	.sponsor-link:hover .sponsor-logo {
-		filter: grayscale(0%);
-		opacity: 1;
+		opacity: 0.8;
 	}
 
 	@media (min-width: 640px) {
 		.sponsor-logo {
-			height: 56px;
+			max-height: 72px;
 		}
 	}
 </style>

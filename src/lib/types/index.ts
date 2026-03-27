@@ -4,10 +4,10 @@ export interface Festival {
 	year: number;
 	festival_start_date: string;
 	festival_end_date: string;
-	tagline_en: string;
-	tagline_lt: string;
-	hero_description_en: string;
-	hero_description_lt: string;
+	tagline_en?: string;
+	tagline_lt?: string;
+	hero_description_en?: string;
+	hero_description_lt?: string;
 }
 
 export interface Film {
@@ -15,16 +15,17 @@ export interface Film {
 	slug: string;
 	title_en: string;
 	title_lt: string;
-	description_en: string;
-	description_lt: string;
-	director: string;
-	duration: number;
+	description_en?: string;
+	description_lt?: string;
+	director?: string;
+	duration?: number;
 	language: string;
 	screening_datetime: string;
 	location_name: string;
 	location_address: string;
 	location_google_maps_url: string;
-	trailer_url: string;
+	trailer_url_en?: string;
+	trailer_url_lt?: string;
 	poster_filename: string;
 }
 
@@ -32,8 +33,7 @@ export interface Sponsor {
 	year: number;
 	sponsor_name: string;
 	logo_filename: string;
-	url: string;
-	tier: 'main' | 'partner' | 'media' | 'supporter';
+	url?: string;
 	display_order: number;
 }
 

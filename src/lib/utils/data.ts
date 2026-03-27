@@ -91,7 +91,13 @@ export function formatScreeningTime(datetime: string, lang: Lang): string {
 		day: 'numeric',
 		month: 'long'
 	});
-	const timeStr = date.toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' });
+
+	// Use 12-hour format for English, 24-hour for Lithuanian
+	const timeStr = date.toLocaleTimeString(locale, {
+		hour: 'numeric',
+		minute: '2-digit',
+		hour12: lang === 'en'
+	});
 
 	return `${dateStr}, ${timeStr}`;
 }
