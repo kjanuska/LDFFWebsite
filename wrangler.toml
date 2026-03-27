@@ -1,0 +1,5 @@
+name = "ldff-website"
+compatibility_date = "2026-03-27"
+
+[assets]
+directory = "./build"

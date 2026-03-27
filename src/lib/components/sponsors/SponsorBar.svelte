@@ -16,33 +16,15 @@
 		<h2>{strings.sponsors.title}</h2>
 		<div class="sponsor-grid">
 			{#each sponsors as sponsor}
-				{#if sponsor.url}
-					<a
-						href={sponsor.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="sponsor-link"
-						title={sponsor.sponsor_name}
-					>
-						<img
-							src="/images/sponsors/{sponsor.logo_filename}"
-							alt={sponsor.sponsor_name}
-							loading="lazy"
-							decoding="async"
-							class="sponsor-logo"
-						/>
-					</a>
-				{:else}
-					<div class="sponsor-item" title={sponsor.sponsor_name}>
-						<img
-							src="/images/sponsors/{sponsor.logo_filename}"
-							alt={sponsor.sponsor_name}
-							loading="lazy"
-							decoding="async"
-							class="sponsor-logo"
-						/>
-					</div>
-				{/if}
+				<div class="sponsor-item" title={sponsor.sponsor_name}>
+					<img
+						src="/images/sponsors/{sponsor.logo_filename}"
+						alt={sponsor.sponsor_name}
+						loading="lazy"
+						decoding="async"
+						class="sponsor-logo"
+					/>
+				</div>
 			{/each}
 		</div>
 	</section>
@@ -78,7 +60,6 @@
 		margin: 0 auto;
 	}
 
-	.sponsor-link,
 	.sponsor-item {
 		display: flex;
 		align-items: center;
@@ -97,9 +78,6 @@
 		transition: all var(--transition-base);
 	}
 
-	.sponsor-link:hover .sponsor-logo {
-		opacity: 0.8;
-	}
 
 	@media (min-width: 640px) {
 		.sponsor-logo {

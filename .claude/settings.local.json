@@ -13,7 +13,8 @@
       "Bash(npm install --save-dev @types/node)",
       "Bash(cd:*)",
       "Bash(npm run build:data)",
-      "Bash(npm install sharp --save-dev)"
+      "Bash(npm install sharp --save-dev)",
+      "WebFetch(domain:ldff-website.pages.dev)"
     ]
   }
 }
