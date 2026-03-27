@@ -4,21 +4,22 @@
  * Optimize Movie Posters
  *
  * This script standardizes and compresses movie poster images for optimal web display.
- * It converts various formats to JPG and ensures consistent sizing and quality.
+ * It converts various formats (including PDF) to JPG and ensures consistent sizing and quality.
  *
  * Usage: node scripts/optimize-posters.js [year]
  * Examples:
  *   node scripts/optimize-posters.js        # Process all years
  *   node scripts/optimize-posters.js 2026   # Process only 2026
  *
- * Requirements: Install sharp package first
- * npm install sharp --save-dev
+ * Requirements: Install required packages first
+ * npm install sharp pdf2pic --save-dev
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, unlinkSync, statSync } from 'fs';
 import { join, extname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import sharp from 'sharp';
+import { fromPath } from 'pdf2pic';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = join(__filename, '..');
@@ -26,7 +27,7 @@ const ROOT = join(__dirname, '..');
 const IMAGES_DIR = join(ROOT, 'static', 'images');
 
 // Supported input formats
-const SUPPORTED_FORMATS = ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.tif', '.tiff', '.bmp'];
+const SUPPORTED_FORMATS = ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.tif', '.tiff', '.bmp', '.pdf'];
 
 // Poster optimization settings
 const POSTER_CONFIG = {
@@ -68,14 +69,58 @@ function getOptimalQuality(originalSize, processedSize) {
 	return POSTER_CONFIG.quality.medium;
 }
 
+async function convertPdfToBuffer(pdfPath) {
+	try {
+		const options = {
+			density: 300,           // High DPI for quality
+			saveFilename: "poster",
+			savePath: "/tmp",       // Temporary location
+			format: "png",
+			width: POSTER_CONFIG.maxWidth,
+			height: POSTER_CONFIG.maxHeight
+		};
+
+		const convert = fromPath(pdfPath, options);
+		const result = await convert(1); // Convert first page only
+
+		// Read the converted image as buffer
+		const imagePath = result.path;
+		const imageBuffer = readFileSync(imagePath);
+
+		// Clean up temporary file
+		try {
+			unlinkSync(imagePath);
+		} catch (cleanupError) {
+			console.log(`    ⚠️  Could not clean up temp file: ${cleanupError.message}`);
+		}
+
+		return imageBuffer;
+	} catch (error) {
+		throw new Error(`PDF conversion failed: ${error.message}`);
+	}
+}
+
 async function optimizePoster(inputPath, outputPath) {
 	try {
 		// Get original file size
 		const originalStats = statSync(inputPath);
 		const originalSize = originalStats.size;
 
+		const fileExt = extname(inputPath).toLowerCase();
+		let imageInput;
+		let isPdf = false;
+
+		// Handle PDF conversion
+		if (fileExt === '.pdf') {
+			console.log(`    📄 Converting PDF to image...`);
+			imageInput = await convertPdfToBuffer(inputPath);
+			isPdf = true;
+		} else {
+			imageInput = inputPath;
+		}
+
 		// Get image metadata
-		const metadata = await sharp(inputPath).metadata();
+		const metadata = await sharp(imageInput).metadata();
 		const { width, height, format } = metadata;
 
 		// Calculate optimal dimensions maintaining 2:3 aspect ratio
@@ -97,7 +142,7 @@ async function optimizePoster(inputPath, outputPath) {
 		let quality = getOptimalQuality(originalSize, originalSize);
 
 		// Process image
-		let processedImage = sharp(inputPath);
+		let processedImage = sharp(imageInput);
 
 		// Resize if needed
 		const needsResize = width > targetWidth || height > targetHeight;
@@ -144,7 +189,8 @@ async function optimizePoster(inputPath, outputPath) {
 			dimensions: `${finalMetadata.width}x${finalMetadata.height}`,
 			originalDimensions: `${width}x${height}`,
 			wasResized: needsResize,
-			wasConverted: format.toLowerCase() !== 'jpeg',
+			wasConverted: isPdf || format.toLowerCase() !== 'jpeg',
+			wasConvertedFromPdf: isPdf,
 			quality: quality
 		};
 
@@ -190,6 +236,11 @@ async function processYear(year) {
 
 		if (result.success) {
 			let statusLine = `    ✅ Optimized: ${nameWithoutExt}.jpg`;
+
+			// Add PDF conversion info
+			if (result.wasConvertedFromPdf) {
+				statusLine += ` (PDF → JPG)`;
+			}
 
 			// Add dimension info
 			if (result.wasResized) {
@@ -314,12 +365,20 @@ async function main() {
 	}
 }
 
-// Check if sharp is available
+// Check if required packages are available
 try {
 	await import('sharp');
 } catch (error) {
 	console.log('❌ Sharp package not found. Please install it first:');
-	console.log('npm install sharp --save-dev\n');
+	console.log('npm install sharp pdf2pic --save-dev\n');
+	process.exit(1);
+}
+
+try {
+	await import('pdf2pic');
+} catch (error) {
+	console.log('❌ pdf2pic package not found. Please install it first:');
+	console.log('npm install sharp pdf2pic --save-dev\n');
 	process.exit(1);
 }
 

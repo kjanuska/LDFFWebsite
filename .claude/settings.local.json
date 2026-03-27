@@ -14,7 +14,8 @@
       "Bash(cd:*)",
       "Bash(npm run build:data)",
       "Bash(npm install sharp --save-dev)",
-      "WebFetch(domain:ldff-website.pages.dev)"
+      "WebFetch(domain:ldff-website.pages.dev)",
+      "Bash(npm install pdf2pic --save-dev)"
     ]
   }
 }

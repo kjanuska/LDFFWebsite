@@ -22,6 +22,7 @@
 		"@types/node": "^25.3.3",
 		"csv-parse": "^6.1.0",
 		"lucide-svelte": "^0.575.0",
+		"pdf2pic": "^3.2.0",
 		"sharp": "^0.34.5",
 		"svelte": "^5.51.0",
 		"svelte-check": "^4.4.2",

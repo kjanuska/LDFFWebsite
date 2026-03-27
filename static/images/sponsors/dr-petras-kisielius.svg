@@ -1,9 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="150" viewBox="0 0 300 150">
   <rect width="300" height="150" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
-  <text x="150" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#212529">
+  <text x="150" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#212529">
     Dr. Petras Kisielius
-  </text>
-  <text x="150" y="95" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#6c757d">
-    Medical Practice
   </text>
 </svg>
