@@ -1,0 +1,5 @@
+# This file tells Cloudflare NOT to use Wrangler for deployment
+# The project uses @sveltejs/adapter-static for Cloudflare Pages
+
+[build]
+command = "npm run build"
