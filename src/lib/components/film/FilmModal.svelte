@@ -102,9 +102,14 @@
 
 	.meta-item {
 		display: flex;
-		align-items: center;
+		align-items: baseline;
 		gap: var(--space-sm);
 		color: var(--color-gray-600);
+	}
+
+	.meta-item :global(svg) {
+		flex-shrink: 0;
+		margin-top: 0.125em;
 	}
 
 	.meta-item a {

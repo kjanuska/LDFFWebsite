@@ -149,6 +149,7 @@
 
 	.meta-item {
 		display: flex;
+		align-items: center;
 		gap: var(--space-lg);
 		font-size: var(--text-sm);
 	}
@@ -162,8 +163,14 @@
 		font-weight: 500;
 	}
 
+	.meta-item dt :global(svg) {
+		flex-shrink: 0;
+	}
+
 	.meta-item dd {
 		color: var(--color-gray-800);
+		display: flex;
+		align-items: center;
 	}
 
 	.meta-item dd a {

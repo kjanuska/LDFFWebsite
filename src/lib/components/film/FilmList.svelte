@@ -218,7 +218,7 @@
 
 	.meta-row {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		gap: var(--space-sm);
 		font-size: var(--text-sm);
 		color: var(--color-gray-600);
@@ -227,7 +227,6 @@
 	.meta-row dt {
 		flex-shrink: 0;
 		color: var(--color-gray-400);
-		padding-top: 1px;
 	}
 
 	.meta-row dd a {
