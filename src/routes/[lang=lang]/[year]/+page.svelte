@@ -1,16 +1,12 @@
 <script lang="ts">
 	import type { Film, Lang } from '$lib/types';
 	import { t } from '$lib/i18n';
-	import SeoHead from '$lib/components/seo/SeoHead.svelte';
-	import JsonLd from '$lib/components/seo/JsonLd.svelte';
-	import { buildEventJsonLd, buildBreadcrumbJsonLd } from '$lib/utils/seo';
 	import Breadcrumb from '$lib/components/ui/Breadcrumb.svelte';
 	import Hero from '$lib/components/home/Hero.svelte';
 	import FilmList from '$lib/components/film/FilmList.svelte';
 	import TrailerModal from '$lib/components/film/TrailerModal.svelte';
 	import SponsorBar from '$lib/components/sponsors/SponsorBar.svelte';
 	import GalleryGrid from '$lib/components/gallery/GalleryGrid.svelte';
-	import { getFestivalTagline } from '$lib/utils/data';
 
 	let { data } = $props();
 	let lang = $derived(data.lang as Lang);
@@ -18,29 +14,6 @@
 
 	let selectedFilm: Film | null = $state(null);
 </script>
-
-{#if data.festival}
-	{@const tagline = getFestivalTagline(data.festival, lang)}
-	<SeoHead
-		title="LDFF {data.year} — {tagline}"
-		description={lang === 'en' ? data.festival.hero_description_en : data.festival.hero_description_lt}
-		{lang}
-	/>
-	<JsonLd data={buildEventJsonLd(data.festival, lang)} />
-{:else}
-	<SeoHead
-		title="LDFF {data.year}"
-		description={strings.seo.siteDescription}
-		{lang}
-	/>
-{/if}
-<JsonLd
-	data={buildBreadcrumbJsonLd([
-		{ name: strings.nav.home, url: `/${lang}/` },
-		{ name: strings.archive.title, url: `/${lang}/archive` },
-		{ name: String(data.year), url: `/${lang}/${data.year}` }
-	])}
-/>
 
 <div class="container">
 	<Breadcrumb

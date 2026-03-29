@@ -7,10 +7,6 @@
 	let lang = $derived(data.lang as Lang);
 </script>
 
-<svelte:head>
-	<html lang={lang}></html>
-</svelte:head>
-
 <Header {lang} />
 
 <main>

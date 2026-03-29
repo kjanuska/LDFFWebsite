@@ -15,7 +15,10 @@
       "Bash(npm run build:data)",
       "Bash(npm install sharp --save-dev)",
       "WebFetch(domain:ldff-website.pages.dev)",
-      "Bash(npm install pdf2pic --save-dev)"
+      "Bash(npm install pdf2pic --save-dev)",
+      "Bash(grep -o '.\\\\{0,200\\\\}film-list.\\\\{0,200\\\\}')",
+      "Bash(python3 -c \":*)",
+      "Bash(grep -o \"\"af\"\"[^,}]* /Users/other/Documents/LDFFWebsite/build/_app/immutable/chunks/DKPaytsV.js)"
     ]
   }
 }

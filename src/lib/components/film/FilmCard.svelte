@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Film, Lang } from '$lib/types';
 	import { getFilmTitle } from '$lib/utils/data';
+	import { posterExists, getPosterUrl, generatePosterPlaceholder } from '$lib/utils/poster';
 
 	interface Props {
 		film: Film;
@@ -10,6 +11,7 @@
 
 	let { film, lang, onfilmclick }: Props = $props();
 	let title = $derived(getFilmTitle(film, lang));
+	let filmHasPoster = $derived(posterExists(film));
 
 	function handleClick(e: MouseEvent) {
 		if (onfilmclick) {
@@ -25,13 +27,21 @@
 	onclick={handleClick}
 >
 	<div class="poster-wrapper">
-		<img
-			src="/images/{film.year}/posters/{film.poster_filename}"
-			alt={title}
-			loading="lazy"
-			decoding="async"
-			class="poster"
-		/>
+		{#if filmHasPoster}
+			<img
+				src={getPosterUrl(film)}
+				alt={title}
+				loading="lazy"
+				decoding="async"
+				class="poster"
+			/>
+		{:else}
+			<img
+				src={generatePosterPlaceholder(film, lang)}
+				alt={title}
+				class="poster placeholder"
+			/>
+		{/if}
 		<div class="overlay">
 			<span class="director">{film.director}</span>
 		</div>

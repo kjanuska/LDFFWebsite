@@ -56,28 +56,33 @@
 
 	.modal-content {
 		position: relative;
-		max-width: 900px;
+		max-width: min(1200px, 95vw);
 		width: 100%;
 		max-height: 90vh;
-		overflow-y: auto;
-		background: var(--color-white);
+		overflow: hidden;
+		background: transparent;
+		border-radius: 8px;
 	}
 
 	.modal-close {
 		position: absolute;
-		top: var(--space-md);
-		right: var(--space-md);
-		z-index: 1;
+		top: 16px;
+		right: 16px;
+		z-index: 10;
 		display: grid;
 		place-items: center;
-		width: 40px;
-		height: 40px;
-		color: var(--color-gray-600);
-		transition: color var(--transition-fast);
+		width: 44px;
+		height: 44px;
+		background: rgba(0, 0, 0, 0.7);
+		backdrop-filter: blur(8px);
+		border-radius: 50%;
+		color: var(--color-white);
+		transition: all var(--transition-fast);
 	}
 
 	.modal-close:hover {
-		color: var(--color-black);
+		background: rgba(0, 0, 0, 0.8);
+		transform: scale(1.05);
 	}
 
 	@keyframes fadeIn {

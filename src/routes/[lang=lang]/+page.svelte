@@ -1,9 +1,6 @@
 <script lang="ts">
 	import type { Film, Lang } from '$lib/types';
 	import { t } from '$lib/i18n';
-	import SeoHead from '$lib/components/seo/SeoHead.svelte';
-	import JsonLd from '$lib/components/seo/JsonLd.svelte';
-	import { buildOrganizationJsonLd, buildEventJsonLd } from '$lib/utils/seo';
 	import Hero from '$lib/components/home/Hero.svelte';
 	import FilmList from '$lib/components/film/FilmList.svelte';
 	import TrailerModal from '$lib/components/film/TrailerModal.svelte';
@@ -15,16 +12,6 @@
 
 	let selectedFilm: Film | null = $state(null);
 </script>
-
-<SeoHead
-	title={strings.seo.siteTitle}
-	description={strings.seo.siteDescription}
-	{lang}
-/>
-<JsonLd data={buildOrganizationJsonLd()} />
-{#if data.festival}
-	<JsonLd data={buildEventJsonLd(data.festival, lang)} />
-{/if}
 
 {#if data.festival}
 	<Hero festival={data.festival} {lang} showYear={false} />

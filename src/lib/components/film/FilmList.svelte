@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { Film, Lang } from '$lib/types';
 	import { t } from '$lib/i18n';
-	import { getFilmTitle, getFilmDescription, formatScreeningTime } from '$lib/utils/data';
+	import { getFilmTitle, getFilmDescription, formatScreeningTime, hasTrailer } from '$lib/utils/data';
+	import { posterExists, getPosterUrl, generatePosterPlaceholder } from '$lib/utils/poster';
 	import { Play, Calendar, MapPin, Clock } from 'lucide-svelte';
 
 	interface Props {
@@ -18,23 +19,33 @@
 	{#each films as film, i (film.slug)}
 		{@const title = getFilmTitle(film, lang)}
 		{@const description = getFilmDescription(film, lang)}
+		{@const filmHasTrailer = hasTrailer(film)}
+		{@const filmHasPoster = posterExists(film)}
 		<li class="film-item" class:odd={i % 2 === 0}>
 			<div class="film-number">{String(i + 1).padStart(2, '0')}</div>
 
 			<button
 				class="poster-btn"
-				onclick={() => film.trailer_url && ontrailerclick?.(film)}
-				aria-label={film.trailer_url ? `${strings.film.watchTrailer}: ${title}` : title}
-				disabled={!film.trailer_url}
+				onclick={() => filmHasTrailer && ontrailerclick?.(film)}
+				aria-label={filmHasTrailer ? `${strings.film.watchTrailer}: ${title}` : title}
+				disabled={!filmHasTrailer}
 			>
-				<img
-					src="/images/{film.year}/posters/{film.poster_filename}"
-					alt={title}
-					loading="lazy"
-					decoding="async"
-					class="poster"
-				/>
-				{#if film.trailer_url}
+				{#if filmHasPoster}
+					<img
+						src={getPosterUrl(film)}
+						alt={title}
+						loading="lazy"
+						decoding="async"
+						class="poster"
+					/>
+				{:else}
+					<img
+						src={generatePosterPlaceholder(film, lang)}
+						alt={title}
+						class="poster placeholder"
+					/>
+				{/if}
+				{#if filmHasTrailer}
 					<div class="play-overlay">
 						<div class="play-icon"><Play size={28} fill="currentColor" /></div>
 					</div>
@@ -144,35 +155,37 @@
 		transform: scale(1.04);
 	}
 
-	/* Play overlay — always visible when trailer exists */
+	/* Play overlay — only visible on hover */
 	.play-overlay {
 		position: absolute;
 		inset: 0;
-		background: rgba(0, 0, 0, 0.25);
+		background: rgba(0, 0, 0, 0.6);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: background var(--transition-base);
+		opacity: 0;
+		transition: opacity var(--transition-base);
 	}
 
 	.poster-btn:not(:disabled):hover .play-overlay {
-		background: rgba(0, 0, 0, 0.45);
+		opacity: 1;
 	}
 
 	.play-icon {
-		width: 52px;
-		height: 52px;
+		width: 64px;
+		height: 64px;
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.92);
+		background: rgba(255, 255, 255, 0.95);
 		color: var(--color-black);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: transform var(--transition-fast);
+		transition: transform var(--transition-base);
+		backdrop-filter: blur(4px);
 	}
 
 	.poster-btn:not(:disabled):hover .play-icon {
-		transform: scale(1.1);
+		transform: scale(1.05);
 	}
 
 	/* Film info */

@@ -1,9 +1,6 @@
 <script lang="ts">
 	import type { Lang } from '$lib/types';
 	import { t } from '$lib/i18n';
-	import SeoHead from '$lib/components/seo/SeoHead.svelte';
-	import JsonLd from '$lib/components/seo/JsonLd.svelte';
-	import { buildBreadcrumbJsonLd } from '$lib/utils/seo';
 	import Breadcrumb from '$lib/components/ui/Breadcrumb.svelte';
 	import { formatDateRange } from '$lib/utils/data';
 	import { ArrowRight } from 'lucide-svelte';
@@ -12,18 +9,6 @@
 	let lang = $derived(data.lang as Lang);
 	let strings = $derived(t(lang));
 </script>
-
-<SeoHead
-	title={strings.archive.title}
-	description={strings.seo.siteDescription}
-	{lang}
-/>
-<JsonLd
-	data={buildBreadcrumbJsonLd([
-		{ name: strings.nav.home, url: `/${lang}/` },
-		{ name: strings.archive.title, url: `/${lang}/archive` }
-	])}
-/>
 
 <div class="container">
 	<Breadcrumb

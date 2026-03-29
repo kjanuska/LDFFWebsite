@@ -26,7 +26,7 @@ export interface Film {
 	location_google_maps_url: string;
 	trailer_url_en?: string;
 	trailer_url_lt?: string;
-	poster_filename: string;
+	poster_filename?: string;
 }
 
 export interface Sponsor {

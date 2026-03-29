@@ -101,3 +101,15 @@ export function formatScreeningTime(datetime: string, lang: Lang): string {
 
 	return `${dateStr}, ${timeStr}`;
 }
+
+export function getTrailerUrl(film: Film, lang: Lang): string | null {
+	const trailerUrl = lang === 'en' ? film.trailer_url_en : film.trailer_url_lt;
+	return trailerUrl && trailerUrl.trim() !== '' ? trailerUrl : null;
+}
+
+export function hasTrailer(film: Film): boolean {
+	return !!(
+		(film.trailer_url_en && film.trailer_url_en.trim() !== '') ||
+		(film.trailer_url_lt && film.trailer_url_lt.trim() !== '')
+	);
+}

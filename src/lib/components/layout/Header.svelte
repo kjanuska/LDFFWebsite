@@ -2,6 +2,7 @@
 	import type { Lang } from '$lib/types';
 	import { t } from '$lib/i18n';
 	import LanguageSwitcher from '$lib/components/ui/LanguageSwitcher.svelte';
+	import { getAllFestivals } from '$lib/utils/data';
 	import { page } from '$app/stores';
 
 	interface Props {
@@ -10,9 +11,15 @@
 
 	let { lang }: Props = $props();
 	let strings = $derived(t(lang));
+	let years = $derived(getAllFestivals().map(f => f.year));
 
 	function isActive(path: string): boolean {
 		return $page.url.pathname === path;
+	}
+
+	function isArchiveActive(): boolean {
+		return $page.url.pathname.startsWith(`/${lang}/archive`) ||
+			/^\/(?:en|lt)\/\d{4}/.test($page.url.pathname);
 	}
 </script>
 
@@ -24,9 +31,16 @@
 			<a href="/{lang}/" class:active={isActive(`/${lang}/`) || isActive(`/${lang}`)}
 				>{strings.nav.home}</a
 			>
-			<a href="/{lang}/archive" class:active={isActive(`/${lang}/archive`)}
-				>{strings.nav.archive}</a
-			>
+			<div class="dropdown-wrap">
+				<a href="/{lang}/archive" class:active={isArchiveActive()}
+					>{strings.nav.archive}</a
+				>
+				<div class="dropdown">
+					{#each years as year}
+						<a href="/{lang}/{year}" class:active={isActive(`/${lang}/${year}`)}>{year}</a>
+					{/each}
+				</div>
+			</div>
 		</nav>
 
 		<LanguageSwitcher {lang} />
@@ -93,6 +107,59 @@
 	.nav a.active {
 		color: var(--color-white);
 		border-bottom-color: var(--color-flag-yellow);
+	}
+
+	/* Dropdown */
+	.dropdown-wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	.dropdown {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		translate: -50% 0;
+		padding-top: 12px;
+		background: transparent;
+		min-width: 100px;
+		display: flex;
+		flex-direction: column;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 150ms ease;
+	}
+
+	.dropdown-wrap:hover .dropdown {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.dropdown::before {
+		content: '';
+		position: absolute;
+		inset: 12px 0 0;
+		background: var(--color-black);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		z-index: -1;
+	}
+
+	.dropdown a {
+		padding: 8px 16px;
+		border-bottom: none;
+		text-align: center;
+		letter-spacing: 0.05em;
+	}
+
+	.dropdown a:hover,
+	.dropdown a.active {
+		background: rgba(255, 255, 255, 0.08);
+		color: var(--color-white);
+	}
+
+	.dropdown a.active {
+		border-bottom: none;
 	}
 
 	/* override LanguageSwitcher colors inside dark header */
