@@ -29,10 +29,6 @@ vite.config.ts.timestamp-*
 # Generated data (rebuilt from CSV — do not edit manually)
 src/lib/data/*.json
 
-# Placeholder images created during development
-# Real images are added manually, but placeholders should not be committed
-static/images/*/posters/*.jpg
-static/images/*/gallery/*
 # Sponsor logos live in static/images/sponsors/ (flat, no year subdirectory)
 # Commit SVGs directly; ignore other formats if they are large/binary
 static/images/sponsors/*.png
