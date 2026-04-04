@@ -2,7 +2,7 @@ import type { Film, Lang } from '$lib/types';
 import { getFilmTitle } from './data';
 
 // Films that we know don't have actual poster images
-const FILMS_WITHOUT_POSTERS = ['secret-screening', 'under-the-red-light'];
+const FILMS_WITHOUT_POSTERS = ['secret-screening'];
 
 /**
  * Check if a poster image exists for a film

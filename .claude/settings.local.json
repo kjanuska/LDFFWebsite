@@ -18,7 +18,15 @@
       "Bash(npm install pdf2pic --save-dev)",
       "Bash(grep -o '.\\\\{0,200\\\\}film-list.\\\\{0,200\\\\}')",
       "Bash(python3 -c \":*)",
-      "Bash(grep -o \"\"af\"\"[^,}]* /Users/other/Documents/LDFFWebsite/build/_app/immutable/chunks/DKPaytsV.js)"
+      "Bash(grep -o \"\"af\"\"[^,}]* /Users/other/Documents/LDFFWebsite/build/_app/immutable/chunks/DKPaytsV.js)",
+      "Bash(find /Users/other/Documents/LDFFWebsite -maxdepth 2 -type f -name *.json -o -name *.config.* -o -name *.ts -o -name *.js)",
+      "Bash(grep -E \"^/Users/other/Documents/LDFFWebsite/[^/]+$|^/Users/other/Documents/LDFFWebsite/[^/]+/[^/]+$\")",
+      "Bash(git log:*)",
+      "Skill(code-review:code-review)"
     ]
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true
   }
 }
