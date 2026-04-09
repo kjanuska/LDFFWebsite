@@ -24,33 +24,38 @@
 		<li class="film-item" class:odd={i % 2 === 0}>
 			<div class="film-number">{String(i + 1).padStart(2, '0')}</div>
 
-			<button
-				class="poster-btn"
-				onclick={() => filmHasTrailer && ontrailerclick?.(film)}
-				aria-label={filmHasTrailer ? `${strings.film.watchTrailer}: ${title}` : title}
-				disabled={!filmHasTrailer}
-			>
-				{#if filmHasPoster}
-					<img
-						src={getPosterUrl(film)}
-						alt={title}
-						loading="lazy"
-						decoding="async"
-						class="poster"
-					/>
-				{:else}
-					<img
-						src={generatePosterPlaceholder(film, lang)}
-						alt={title}
-						class="poster placeholder"
-					/>
+			<div class="poster-col">
+				<button
+					class="poster-btn"
+					onclick={() => filmHasTrailer && ontrailerclick?.(film)}
+					aria-label={filmHasTrailer ? `${strings.film.watchTrailer}: ${title}` : title}
+					disabled={!filmHasTrailer}
+				>
+					{#if filmHasPoster}
+						<img
+							src={getPosterUrl(film)}
+							alt={title}
+							loading="lazy"
+							decoding="async"
+							class="poster"
+						/>
+					{:else}
+						<img
+							src={generatePosterPlaceholder(film, lang)}
+							alt={title}
+							class="poster placeholder"
+						/>
+					{/if}
+					{#if filmHasTrailer}
+						<div class="play-overlay">
+							<div class="play-icon"><Play size={28} fill="currentColor" /></div>
+						</div>
+					{/if}
+				</button>
+				{#if lang === 'en' && film.english_subtitles === false}
+					<p class="no-subs">No English subtitles.</p>
 				{/if}
-				{#if filmHasTrailer}
-					<div class="play-overlay">
-						<div class="play-icon"><Play size={28} fill="currentColor" /></div>
-					</div>
-				{/if}
-			</button>
+			</div>
 
 			<div class="film-info">
 				<div class="film-header">
@@ -130,6 +135,19 @@
 	}
 
 	/* Poster */
+	.poster-col {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-md);
+	}
+
+	.no-subs {
+		font-size: var(--text-xs);
+		font-style: italic;
+		text-align: center;
+		color: var(--color-gray-500);
+	}
+
 	.poster-btn {
 		position: relative;
 		display: block;

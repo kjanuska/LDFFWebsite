@@ -45,11 +45,16 @@ function readCsv<T>(filename: string): T[] {
 		columns: true,
 		skip_empty_lines: true,
 		trim: true,
+		relax_column_count: true,
 		cast: (value, context) => {
 			if (context.header) return value;
 			if (context.column === 'year' || context.column === 'duration' || context.column === 'display_order') {
 				const num = Number(value);
 				return isNaN(num) ? value : num;
+			}
+			if (context.column === 'english_subtitles') {
+                console.log(value);
+				return value.toUpperCase() !== 'FALSE';
 			}
 			return value;
 		}

@@ -55,7 +55,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		gap: var(--space-xl);
+		gap: var(--space-md);
 		max-width: 1200px;
 		margin: 0 auto;
 	}
@@ -64,13 +64,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 160px;
-		height: 80px;
+		width: 100px;
+		height: 56px;
 		flex-shrink: 0;
 	}
 
 	.sponsor-logo {
-		max-height: 64px;
+		max-height: 44px;
 		max-width: 100%;
 		width: auto;
 		height: auto;
@@ -78,8 +78,18 @@
 		transition: all var(--transition-base);
 	}
 
-
 	@media (min-width: 640px) {
+		.sponsor-item {
+			width: 160px;
+			height: 80px;
+		}
+
+		.sponsor-logo {
+			max-height: 64px;
+		}
+	}
+
+	@media (min-width: 1024px) {
 		.sponsor-logo {
 			max-height: 72px;
 		}

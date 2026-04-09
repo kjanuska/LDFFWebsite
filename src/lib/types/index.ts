@@ -27,6 +27,7 @@ export interface Film {
 	trailer_url_en?: string;
 	trailer_url_lt?: string;
 	poster_filename?: string;
+	english_subtitles?: boolean;
 }
 
 export interface Sponsor {
