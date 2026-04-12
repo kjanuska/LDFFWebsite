@@ -53,7 +53,6 @@ function readCsv<T>(filename: string): T[] {
 				return isNaN(num) ? value : num;
 			}
 			if (context.column === 'english_subtitles') {
-                console.log(value);
 				return value.toUpperCase() !== 'FALSE';
 			}
 			return value;
