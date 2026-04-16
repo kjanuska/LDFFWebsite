@@ -8,10 +8,10 @@
  *
  * CSV files in data/csv/:
  * - festival-info.csv      — one row per festival year
- * - films.csv              — one row per film (uses location_slug)
- * - locations-master.csv   — master list of venues (slug → name + map URL)
- * - sponsors.csv           — one row per sponsor-year entry (uses sponsor_slug)
- * - sponsors-master.csv    — master list of sponsors (slug → name + logo + url)
+ * - films.csv              — one row per film (uses location_name to reference locations-master)
+ * - locations-master.csv   — master list of venues (name + address + map URL)
+ * - sponsors.csv           — one row per sponsor-year entry (uses sponsor_name to reference sponsors-master)
+ * - sponsors-master.csv    — master list of sponsors (name + logo + url)
  *
  * Gallery images are auto-detected from static/images/{year}/gallery/ folders.
  * Sponsor logos live in static/images/sponsors/ (flat, no year subdirectory).
@@ -33,6 +33,16 @@ const STATIC_DIR = join(ROOT, 'static');
 mkdirSync(OUT_DIR, { recursive: true });
 
 // --- Helpers ---
+
+function slugify(str: string): string {
+	return str
+		.toLowerCase()
+		.normalize('NFD')
+		.replace(/[\u0300-\u036f]/g, '') // strip diacritics
+		.replace(/['''`]/g, '')           // strip apostrophes (don't split words)
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/^-+|-+$/g, '');
+}
 
 function readCsv<T>(filename: string): T[] {
 	const filepath = join(CSV_DIR, filename);
@@ -87,21 +97,21 @@ writeJson('festivals.json', festivals);
 
 // --- Load Locations Master ---
 
-type LocationRow = { slug: string; name: string; address: string; google_maps_url: string };
+type LocationRow = { name: string; address: string; google_maps_url: string };
 const locationsRaw = readCsv<LocationRow>('locations-master.csv');
-const locationsMap = new Map(locationsRaw.map((l) => [l.slug, l]));
+const locationsMap = new Map(locationsRaw.map((l) => [l.name, l]));
 
-// --- Process Films (resolve location_slug → location fields) ---
+// --- Process Films (resolve location → location fields) ---
 
-type FilmRow = Record<string, unknown> & { location_slug?: string; trailer_url_en?: string; trailer_url_lt?: string };
+type FilmRow = Record<string, unknown> & { title_en?: string; location?: string; trailer_url_en?: string; trailer_url_lt?: string };
 const filmsRaw = readCsv<FilmRow>('films.csv');
-validateRequired(filmsRaw as Record<string, unknown>[], ['year', 'slug', 'title_en', 'title_lt'], 'films.csv');
+validateRequired(filmsRaw as Record<string, unknown>[], ['year', 'title_en', 'title_lt'], 'films.csv');
 
 const films = filmsRaw.map((film) => {
-	const { location_slug, trailer_url_en, trailer_url_lt, ...rest } = film;
-	const loc = location_slug ? locationsMap.get(location_slug) : undefined;
-	if (location_slug && !loc) {
-		console.warn(`Warning: location_slug "${location_slug}" not found in locations-master.csv`);
+	const { location, trailer_url_en, trailer_url_lt, ...rest } = film;
+	const loc = location ? locationsMap.get(location) : undefined;
+	if (location && !loc) {
+		console.warn(`Warning: location "${location}" not found in locations-master.csv`);
 	}
 
 	// Smart trailer URL logic
@@ -117,6 +127,8 @@ const films = filmsRaw.map((film) => {
 
 	return {
 		...rest,
+		slug: slugify(film.title_en as string),
+		poster_filename: `${slugify(film.title_en as string)}.jpg`,
 		location_name: loc?.name ?? '',
 		location_address: loc?.address ?? '',
 		location_google_maps_url: loc?.google_maps_url ?? '',
@@ -129,25 +141,26 @@ writeJson('films.json', films);
 
 // --- Load Sponsors Master ---
 
-type SponsorMasterRow = { slug: string; name: string; logo_filename: string; url: string };
+type SponsorMasterRow = { name: string; url: string };
 const sponsorsMaster = readCsv<SponsorMasterRow>('sponsors-master.csv');
-const sponsorsMap = new Map(sponsorsMaster.map((s) => [s.slug, s]));
+const sponsorsMap = new Map(sponsorsMaster.map((s) => [s.name, s]));
 
-// --- Process Sponsors (resolve sponsor_slug → full details) ---
+// --- Process Sponsors (resolve sponsor → full details) ---
 
-type SponsorYearRow = { year: number; sponsor_slug: string };
+type SponsorYearRow = { year: number; sponsor: string };
 const sponsorsRaw = readCsv<SponsorYearRow>('sponsors.csv');
-validateRequired(sponsorsRaw as unknown as Record<string, unknown>[], ['year', 'sponsor_slug'], 'sponsors.csv');
+validateRequired(sponsorsRaw as unknown as Record<string, unknown>[], ['year', 'sponsor'], 'sponsors.csv');
 
 const sponsors = sponsorsRaw.map((s, index) => {
-	const master = sponsorsMap.get(s.sponsor_slug);
+	const master = sponsorsMap.get(s.sponsor);
 	if (!master) {
-		console.warn(`Warning: sponsor_slug "${s.sponsor_slug}" not found in sponsors-master.csv`);
+		console.warn(`Warning: sponsor "${s.sponsor}" not found in sponsors-master.csv`);
 	}
+	const name = master?.name ?? s.sponsor;
 	return {
 		year: s.year,
-		sponsor_name: master?.name ?? s.sponsor_slug,
-		logo_filename: master?.logo_filename ?? '',
+		sponsor_name: name,
+		logo_filename: `${slugify(name)}.svg`,
 		url: master?.url && master.url.trim() ? master.url : undefined,
 		display_order: index + 1, // Use CSV row order as importance ranking
 	};

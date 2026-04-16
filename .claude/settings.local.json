@@ -23,7 +23,10 @@
       "Bash(grep -E \"^/Users/other/Documents/LDFFWebsite/[^/]+$|^/Users/other/Documents/LDFFWebsite/[^/]+/[^/]+$\")",
       "Bash(git log:*)",
       "Skill(code-review:code-review)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(npm list:*)",
+      "Bash(node -e \"const f = require\\('./src/lib/data/films.json'\\); f.slice\\(0,2\\).forEach\\(x => console.log\\(x.slug, '|', x.title_en, '|', x.location_name\\)\\)\")",
+      "Skill(build)"
     ]
   },
   "enabledPlugins": {
